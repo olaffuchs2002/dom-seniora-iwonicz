@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400&family=Manrope:wght@400;500&family=Cinzel:wght@500&display=swap">
+<script src="./image-slot.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff;color:#151c29;font-size:16px;line-height:1.6;font-family:"Manrope",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:#151c29}a:hover{color:#2d3546}
+::selection{background:#e4e2dc}
+:focus-visible{outline:1px solid #151c29;outline-offset:3px}
+input,select,textarea,button{font-family:inherit}
+</style>
+</helmet>
+
+<div style="background:#ffffff;color:#151c29;font-family:'Manrope',sans-serif;font-weight:400;font-size:18px;line-height:1.6">
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:60;background:{{ navBg }};color:{{ navFg }};box-shadow:{{ navLine }};transition:background .4s,color .4s,box-shadow .4s">
+  <div ref="{{ progRef }}" style="position:absolute;left:0;bottom:0;height:1px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:#151c29;pointer-events:none"></div>
+  <div style="max-width:1680px;margin:0 auto;padding:0 clamp(20px,3.2vw,60px);height:88px;display:flex;align-items:center;gap:clamp(14px,2vw,36px)">
+    <a href="#/" aria-label="Willa Zdrój – strona główna" style="margin-right:auto;text-decoration:none;color:#151c29;flex:none;display:flex;align-items:center;gap:0">
+      <span style="display:block;flex:none;overflow:hidden;width:{{ skW }};margin-right:{{ skM }};opacity:{{ skO }};transition:width .8s cubic-bezier(.2,.7,.2,1),margin-right .8s cubic-bezier(.2,.7,.2,1),opacity .5s ease"><svg width="92" height="51" viewBox="0 2 240 134" fill="none" stroke="#151c29" stroke-width="1.5" stroke-linejoin="miter" stroke-linecap="square" aria-hidden="true" style="display:block;width:clamp(52px,6vw,92px);height:auto;stroke-dasharray:1;stroke-dashoffset:{{ skD }};transition:stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .25s"><path pathLength="1" d="M60 9H180L197 24H43Z"></path><path pathLength="1" d="M40 24H200V28H40Z"></path><path pathLength="1" d="M46 28V72"></path><path pathLength="1" d="M194 28V72"></path><path pathLength="1" d="M44 46H196"></path><path pathLength="1" d="M52.5 33h8v9h-8Z"></path><path pathLength="1" d="M73.5 33h8v9h-8Z"></path><path pathLength="1" d="M95 33h8v9h-8Z"></path><path pathLength="1" d="M116 33h8v9h-8Z"></path><path pathLength="1" d="M137 33h8v9h-8Z"></path><path pathLength="1" d="M158.5 33h8v9h-8Z"></path><path pathLength="1" d="M179.5 33h8v9h-8Z"></path><path pathLength="1" d="M52.5 51h8v15h-8Z"></path><path pathLength="1" d="M73.5 51h8v15h-8Z"></path><path pathLength="1" d="M95 51h8v15h-8Z"></path><path pathLength="1" d="M116 51h8v15h-8Z"></path><path pathLength="1" d="M137 51h8v15h-8Z"></path><path pathLength="1" d="M158.5 51h8v15h-8Z"></path><path pathLength="1" d="M179.5 51h8v15h-8Z"></path><path pathLength="1" d="M22 72H202"></path><path pathLength="1" d="M22 77H202"></path><path pathLength="1" d="M16 128V90Q16 80 28 79H204V128"></path><path pathLength="1" d="M19 86h6v13h-6Z"></path><path pathLength="1" d="M50 85h13v14h-13Z"></path><path pathLength="1" d="M71 85h13v14h-13Z"></path><path pathLength="1" d="M92.5 85h13v14h-13Z"></path><path pathLength="1" d="M113.5 85h13v14h-13Z"></path><path pathLength="1" d="M134.5 85h13v14h-13Z"></path><path pathLength="1" d="M156 85h13v14h-13Z"></path><path pathLength="1" d="M177 85h13v14h-13Z"></path><path pathLength="1" d="M16 104H204"></path><path pathLength="1" d="M19 110h6v18h-6Z"></path><path pathLength="1" d="M50 128V110h13v18"></path><path pathLength="1" d="M71 128V110h13v18"></path><path pathLength="1" d="M92.5 128V110h13v18"></path><path pathLength="1" d="M113.5 128V110h13v18"></path><path pathLength="1" d="M134.5 128V110h13v18"></path><path pathLength="1" d="M156.5 128V108h12v20"></path><path pathLength="1" d="M177 128V110h13v18"></path><path pathLength="1" d="M204 128V102A14 14 0 0 1 232 102V128"></path><path pathLength="1" d="M4 128H236"></path></svg></span>
+      <span style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-family:'Cinzel',serif;font-weight:500;font-size:clamp(16px,1.6vw,22px);letter-spacing:.12em;line-height:1;white-space:nowrap">WILLA ZDRÓJ</span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:500;font-size:clamp(7px,.62vw,8.5px);letter-spacing:.42em;line-height:1;white-space:nowrap">LUKSUSOWY DOM SENIORA</span>
+      </span>
+    </a>
+    <nav style="display:flex;gap:clamp(12px,1.4vw,28px);font-size:14px;font-weight:400;white-space:nowrap;min-width:0;overflow:hidden">
+      <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5"><a href="{{ n.href }}" style="color:inherit;text-decoration:none;padding:6px 0;font-size:14px;font-weight:400;letter-spacing:0;border-bottom:1px solid {{ n.bd }};transition:border-color .3s" style-hover="opacity:.55">{{ n.l }}</a></sc-for>
+    </nav>
+    <a href="#/kontakt" style="flex:none;white-space:nowrap;display:flex;align-items:center;gap:14px;height:46px;padding:0 22px;border:1px solid #151c29;background:transparent;color:#151c29;font-family:'Manrope',sans-serif;font-size:15px;font-weight:500;letter-spacing:0;text-decoration:none;transition:background .35s ease,color .35s ease,border-color .35s ease" style-hover="background:#151c29;color:#ffffff;border-color:#151c29">Umów wizytę<span style="width:22px;height:1px;background:currentColor;opacity:.8"></span></a>
+  </div>
+</header>
+
+<div style="opacity:{{ pgOp }};transition:opacity .28s ease">
+<sc-if value="{{ pg.home }}" hint-placeholder-val="{{ true }}">
+<section id="top" ref="{{ heroSec }}" data-screen-label="Hero" style="position:relative;height:300vh;background:#ffffff">
+ <div ref="{{ heroBg }}" style="position:sticky;top:0;height:100svh;overflow:hidden;background:#ffffff;color:#151c29">
+  <div ref="{{ photoWrap }}" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+    <div ref="{{ heroScale }}" style="position:absolute;left:6vw;top:136px;width:88vw;aspect-ratio:16/9;will-change:left,top,width,height">
+      <img ref="{{ photoImg }}" src="assets/v5/front-dzien.png" alt="Willa Zdrój – elewacja frontowa w słońcu" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:opacity,filter,mask-image"></img>
+      <img ref="{{ sketchImg }}" src="assets/v5/szkic-hero.png" alt="Szkic elewacji frontowej willi" style="position:absolute;inset:0;width:100%;height:100%;transform:translate(1%,0.6%) scale(.99,.951);will-change:opacity"></img>
+    </div>
+    <div ref="{{ heroFog }}" style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.82) 22%,rgba(255,255,255,0) 46%)"></div>
+  </div>
+  <div ref="{{ heroShade }}" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,28,41,.5) 0%,rgba(21,28,41,0) 22%,rgba(21,28,41,0) 45%,rgba(21,28,41,.72) 100%);opacity:0;pointer-events:none"></div>
+  <div ref="{{ heroText }}" style="position:absolute;left:0;right:0;bottom:clamp(32px,5vh,56px);padding:0 clamp(20px,3.2vw,60px);color:#151c29;z-index:2">
+    <div style="max-width:1680px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:end;gap:16px 48px">
+      <div>
+        
+        <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(46px,min(7.2vw,11vh),128px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Luksusowy <span>dom seniora</span></h1>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:22px;justify-self:end;max-width:380px;gap:16px">
+        <a href="#/apartamenty" ref="{{ heroCta }}" style="display:inline-flex;align-items:center;gap:28px;padding:15px 22px;background:transparent;color:#151c29;border:1px solid #151c29;font-size:15px;font-weight:500;letter-spacing:0;text-decoration:none;white-space:nowrap">Wybierz apartament<span>→</span></a>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+
+<section id="willa" ref="{{ willaSec }}" data-screen-label="O willi" style="position:relative;height:320vh;background:#151c29">
+  <div style="position:sticky;top:0;height:100svh;overflow:hidden">
+    <div ref="{{ willaTrack }}" style="display:flex;height:100%;will-change:transform">
+      <div style="position:relative;flex:none;width:100vw;height:100%;display:flex;align-items:flex-end;color:#ffffff;overflow:hidden">
+  <img loading="lazy" src="assets/noc/noc-1.png" alt="Willa Zdrój nad doliną o zmierzchu" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,28,41,.1) 0%,rgba(21,28,41,0) 35%,rgba(21,28,41,.82) 100%)"></div>
+  <div style="position:relative;width:100%;max-width:1680px;margin:0 auto;padding:clamp(120px,20vh,200px) clamp(20px,3.2vw,60px) clamp(40px,7vh,80px)">
+    <h2 style="margin:0;max-width:17ch;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;text-wrap:balance;letter-spacing:-.02em">Dawna willa przy ul. Kulczyńskiego, przebudowana na dom seniora.</h2>
+    <div style="margin-top:clamp(40px,6vh,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));border-top:1px solid rgba(255,255,255,.45)">
+      <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+        <div style="padding:20px 24px 0 0">
+          <div style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1.1;font-weight:400">{{ f.v }}</div>
+          <div style="font-size:16px;color:#f3f1ec;margin-top:4px">{{ f.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+      <div style="position:relative;flex:none;width:100vw;height:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#151c29">
+        <div style="position:relative;overflow:hidden"><img loading="lazy" src="assets/noc/noc-2.png" alt="Fasada willi wieczorem" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,28,41,0) 60%,rgba(21,28,41,.6) 100%)"></div><div style="position:absolute;left:clamp(20px,2.4vw,44px);bottom:clamp(40px,7vh,80px);font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1;color:#ffffff">Fasada od frontu</div></div>
+        <div style="position:relative;overflow:hidden"><img loading="lazy" src="assets/noc/noc-3.png" alt="Willa od strony zbocza" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,28,41,0) 60%,rgba(21,28,41,.6) 100%)"></div><div style="position:absolute;left:clamp(20px,2.4vw,44px);bottom:clamp(40px,7vh,80px);font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1;color:#ffffff">Od strony zbocza</div></div>
+      </div>
+      <div style="position:relative;flex:none;width:100vw;height:100%;display:grid;background:#151c29">
+        <div style="position:relative;overflow:hidden"><img loading="lazy" src="assets/noc/noc-4.png" alt="Taras i restauracja wieczorem" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,28,41,0) 60%,rgba(21,28,41,.6) 100%)"></div><div style="position:absolute;left:clamp(20px,2.4vw,44px);bottom:clamp(40px,7vh,80px);font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1;color:#ffffff">Taras i restauracja</div></div>
+      </div>
+    </div>
+    <div style="position:absolute;left:clamp(20px,3.2vw,60px);right:clamp(20px,3.2vw,60px);bottom:22px;height:1px;background:rgba(255,255,255,.28)"><div ref="{{ willaBar }}" style="height:100%;width:100%;background:#ffffff;transform-origin:0 50%;transform:scaleX(0)"></div></div>
+  </div>
+</section>
+
+<section data-screen-label="Klasycystyczna architektura" style="padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:48px clamp(40px,6vw,120px)">
+    <div style="flex:1 1 380px;min-width:0;max-width:620px">
+      <h3 style="margin:0 0 24px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;text-wrap:balance;letter-spacing:-.02em">Klasycystyczna architektura</h3>
+      <p style="margin:0 0 36px;font-size:18px;line-height:1.6;color:#2d3546;text-wrap:pretty">Zachowujemy pierwotną elewację z kutymi balustradami i kamiennym cokołem. Wnętrza projektujemy od nowa: winda, szerokie korytarze, łazienki bez progów.</p>
+      <a href="#/galeria" style="display:inline-flex;align-items:center;gap:18px;padding:14px 22px;border:1px solid #151c29;color:#151c29;font-size:15px;text-decoration:none;transition:background .3s,color .3s;font-weight:500" style-hover="background:#151c29;color:#ffffff">Zobacz galerię<span>→</span></a>
+    </div>
+    <div style="flex:1.3 1 480px;min-width:0;position:relative;aspect-ratio:4/3;background:#f3f1ec;overflow:hidden">
+      <img src="assets/v5/szkic-hero.png" alt="Rysunek elewacji frontowej" style="position:absolute;inset:6%;width:88%;height:88%;object-fit:contain"></img>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Apartamenty z widokiem" style="padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;flex-direction:row-reverse;align-items:center;gap:48px clamp(40px,6vw,120px)">
+    <div style="flex:1 1 380px;min-width:0;max-width:620px">
+      <h3 style="margin:0 0 24px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;text-wrap:balance;letter-spacing:-.02em">Apartamenty z widokiem</h3>
+      <p style="margin:0 0 36px;font-size:18px;line-height:1.6;color:#2d3546;text-wrap:pretty">Od 12 do 43 m², każdy z własną łazienką i przyciskiem przywołania. Od wschodu poranne słońce nad doliną, od zachodu park.</p>
+      <a href="#/apartamenty" style="display:inline-flex;align-items:center;gap:18px;padding:14px 22px;border:1px solid #151c29;color:#151c29;font-size:15px;text-decoration:none;transition:background .3s,color .3s;font-weight:500" style-hover="background:#151c29;color:#ffffff">Wybierz apartament<span>→</span></a>
+    </div>
+    <div style="flex:1.3 1 480px;min-width:0;position:relative;aspect-ratio:4/3;background:#f3f1ec;overflow:hidden">
+      <img loading="lazy" src="assets/apartament-salon.png" alt="Apartament z salonem i sypialnią" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></img>
+    </div>
+  </div>
+</section>
+<section data-screen-label="SPA, basen i opieka" style="padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:48px clamp(40px,6vw,120px)">
+    <div style="flex:1 1 380px;min-width:0;max-width:620px">
+      <h3 style="margin:0 0 24px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;text-wrap:balance;letter-spacing:-.02em">SPA, basen i opieka</h3>
+      <p style="margin:0 0 36px;font-size:18px;line-height:1.6;color:#2d3546;text-wrap:pretty">Basen z przeciwprądem 3 × 8 m, sauny i jacuzzi na pierwszym piętrze. Pielęgniarki, lekarz i fizjoterapeuta na miejscu.</p>
+      <a href="#/udogodnienia" style="display:inline-flex;align-items:center;gap:18px;padding:14px 22px;border:1px solid #151c29;color:#151c29;font-size:15px;text-decoration:none;transition:background .3s,color .3s;font-weight:500" style-hover="background:#151c29;color:#ffffff">Poznaj udogodnienia<span>→</span></a>
+    </div>
+    <div style="flex:1.3 1 480px;min-width:0;position:relative;aspect-ratio:4/3;background:#f3f1ec;overflow:hidden">
+      <img src="assets/udog/basen.jpg" alt="Basen w strefie SPA na 1. piętrze" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.6);transform-origin:100% 100%"></img>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Harmonogram inwestycji" style="background:#151c29;color:#ffffff;padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(56px,8vh,96px)">
+    <h2 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1.1;letter-spacing:-.02em;text-wrap:balance">Harmonogram</h2>
+    <div style="position:relative">
+      <div style="position:relative;height:44px;margin:0 22px">
+        <div style="position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.28)"></div>
+        <div style="position:absolute;left:0;width:18%;top:50%;height:1px;background:#c9a86f"></div>
+        <span style="position:absolute;left:0;top:50%;width:44px;height:44px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(201,168,111,.22)"></span>
+        <span style="position:absolute;left:0;top:50%;width:16px;height:16px;transform:translate(-50%,-50%);border-radius:50%;background:#c9a86f"></span>
+        <span style="position:absolute;right:0;top:50%;width:18px;height:18px;transform:translate(50%,-50%);border-radius:50%;border:1px solid #c9a86f;background:#151c29"></span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:24px;margin-top:28px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1.1">Start budowy</span>
+          <span style="font-size:16px;color:#c9a86f">Wiosna 2027</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;text-align:right">
+          <span style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1.1">Otwarcie</span>
+          <span style="font-size:16px;color:#c9a86f">Lato 2028</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Znajdź apartament" style="background:#f3f1ec;padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto">
+    <h2 style="margin:0 0 clamp(36px,5vh,56px);font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Znajdź apartament</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px clamp(24px,3vw,56px);align-items:end">
+      <div>
+        <div style="font-size:16px;font-weight:500;margin-bottom:12px">Powierzchnia</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <label style="box-sizing:border-box;min-width:0;display:flex;align-items:center;gap:8px;padding:0 14px;height:56px;background:#ffffff;border:1px solid #e4e2dc"><span style="font-size:14px;color:#6d7381">od</span><input type="number" min="0" value="{{ sMin }}" onChange="{{ setSMin }}" style="all:unset;flex:1;min-width:0;width:100%;font-size:16px"></input><span style="font-size:14px;color:#6d7381">m²</span></label>
+          <label style="box-sizing:border-box;min-width:0;display:flex;align-items:center;gap:8px;padding:0 14px;height:56px;background:#ffffff;border:1px solid #e4e2dc"><span style="font-size:14px;color:#6d7381">do</span><input type="number" min="0" value="{{ sMax }}" onChange="{{ setSMax }}" style="all:unset;flex:1;min-width:0;width:100%;font-size:16px"></input><span style="font-size:14px;color:#6d7381">m²</span></label>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:500;margin-bottom:12px">Piętro</div>
+        <div style="display:flex;gap:6px">
+          <sc-for list="{{ sFloors }}" as="f" hint-placeholder-count="6">
+            <button onClick="{{ f.pick }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:{{ f.flex }};min-width:0;height:56px;padding:0 8px;display:grid;place-items:center;white-space:nowrap;font-size:16px;background:{{ f.bg }};color:{{ f.fg }};border:1px solid {{ f.bd }};transition:background .25s,color .25s">{{ f.l }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <button onClick="{{ sGo }}" style="all:unset;box-sizing:border-box;cursor:pointer;height:56px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 24px;background:transparent;color:#151c29;box-shadow:inset 0 0 0 1px #151c29;transition:background .3s,color .3s;font-size:15px;font-weight:500" style-hover="background:#151c29;color:#ffffff">Szukaj<span style="font-size:14px;opacity:.75">{{ sCount }}</span></button>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Zaproszenie" style="background:#151c29;color:#ffffff;padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 60px">
+    <h2 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Zapraszamy <span>na wizytę</span></h2>
+    <a href="#/kontakt" style="display:inline-flex;align-items:center;gap:28px;padding:17px 24px;background:transparent;color:#ffffff;box-shadow:inset 0 0 0 1px #ffffff;transition:background .3s,color .3s;font-size:15px;font-weight:500;letter-spacing:0;text-decoration:none;white-space:nowrap" style-hover="background:#ffffff;color:#151c29">Umów wizytę<span>→</span></a>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ pg.apartamenty }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Nagłówek: Apartamenty" style="padding:calc(88px + clamp(56px,9vh,110px)) clamp(20px,3.2vw,60px) 0">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 60px;padding-bottom:clamp(28px,4vh,44px);border-bottom:1px solid #e4e2dc">
+    <div>
+            <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(64px,9vw,150px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Apartamenty</h1>
+    </div>
+    <p style="margin:0;max-width:38ch;color:#4a5160;text-wrap:pretty">46 apartamentów od {{ minA }} do {{ maxA }} m² na pięciu piętrach.</p>
+  </div>
+</section>
+<section id="pietra" data-screen-label="Wybór lokalu" style="background:#ffffff;padding:clamp(48px,7vh,80px) clamp(20px,3.2vw,60px) clamp(80px,11vh,140px)">
+  <div style="max-width:1680px;margin:0 auto">
+    
+
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:stretch">
+      <div style="flex:1 1 640px;min-width:0;position:relative;aspect-ratio:16/10;min-height:440px;background:#ffffff;border-radius:0;overflow:hidden">
+
+        <div style="position:absolute;top:14px;left:16px;right:16px;z-index:5;display:flex;align-items:center;gap:10px;font-size:14px;flex-wrap:wrap">
+          <button onClick="{{ goBuilding }}" style="all:unset;cursor:pointer;padding:6px 12px;border-radius:0;background:{{ crumbB.bg }};color:{{ crumbB.fg }};border:1px solid #151c29;white-space:nowrap;transition:background .3s,color .3s">Budynek</button>
+          <sc-if value="{{ inPlan }}" hint-placeholder-val="{{ false }}">
+            <span style="color:#6d7381">/</span>
+            <button onClick="{{ unselect }}" style="all:unset;cursor:pointer;padding:6px 12px;border-radius:0;background:{{ crumbF.bg }};color:{{ crumbF.fg }};border:1px solid #151c29;white-space:nowrap;transition:background .3s,color .3s">{{ floorName }}</button>
+          </sc-if>
+          <sc-if value="{{ hasUnit }}" hint-placeholder-val="{{ false }}">
+            <span style="color:#6d7381">/</span>
+            <span style="padding:6px 12px;border-radius:0;background:#151c29;color:#ffffff;border:1px solid #151c29;white-space:nowrap">Lokal {{ u.id }}</span>
+          </sc-if>
+          <span style="margin-left:auto;color:#6d7381;font-size:13px;letter-spacing:0">{{ stageHint }}</span>
+        </div>
+
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:56px 4% 28px max(8%,64px);opacity:{{ bOp }};transform:scale({{ bSc }});pointer-events:{{ bPe }};transition:opacity .6s ease,transform .9s cubic-bezier(.2,.7,.2,1)">
+          <div style="position:relative;width:100%;max-width:1000px;aspect-ratio:2576/1449">
+            <img loading="lazy" src="assets/v5/szkic-elewacji-t.png" alt="Rysunek elewacji frontowej willi" style="position:absolute;inset:0;width:100%;height:100%"></img>
+            <svg viewBox="0 0 2576 1449" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible">
+            <path d="M640,85 L1915,85 L2125,208 L2125,224 L448,224 L448,208 Z" fill="{{ band5.fill }}" stroke="{{ band5.stroke }}" stroke-width="3" stroke-linejoin="round" onMouseEnter="{{ band5.enter }}" onMouseLeave="{{ bandLeave }}" onClick="{{ band5.pick }}" style="cursor:pointer;transition:fill .35s,stroke .35s"><title>{{ band5.t }}</title></path>
+            <path d="M462,224 L2118,224 L2118,262 L2140,262 L2140,286 L2118,286 L2118,430 L462,430 L462,286 L440,286 L440,262 L462,262 Z" fill="{{ band4.fill }}" stroke="{{ band4.stroke }}" stroke-width="3" stroke-linejoin="round" onMouseEnter="{{ band4.enter }}" onMouseLeave="{{ bandLeave }}" onClick="{{ band4.pick }}" style="cursor:pointer;transition:fill .35s,stroke .35s"><title>{{ band4.t }}</title></path>
+            <path d="M410,430 L2160,430 L2160,448 L2135,460 L2135,680 L440,680 L440,460 L410,448 Z" fill="{{ band3.fill }}" stroke="{{ band3.stroke }}" stroke-width="3" stroke-linejoin="round" onMouseEnter="{{ band3.enter }}" onMouseLeave="{{ bandLeave }}" onClick="{{ band3.pick }}" style="cursor:pointer;transition:fill .35s,stroke .35s"><title>{{ band3.t }}</title></path>
+            <path d="M440,680 L2135,680 L2135,722 L2198,722 L2198,806 L200,806 L200,738 Q250,722 380,720 L440,720 Z" fill="{{ band2.fill }}" stroke="{{ band2.stroke }}" stroke-width="3" stroke-linejoin="round" onMouseEnter="{{ band2.enter }}" onMouseLeave="{{ bandLeave }}" onClick="{{ band2.pick }}" style="cursor:pointer;transition:fill .35s,stroke .35s"><title>{{ band2.t }}</title></path>
+            <path d="M200,806 L2210,806 L2210,812 Q2420,800 2470,1084 L130,1084 L130,1074 L160,1074 L160,1040 L150,1040 L150,830 Q160,812 200,806 Z" fill="{{ band1.fill }}" stroke="{{ band1.stroke }}" stroke-width="3" stroke-linejoin="round" onMouseEnter="{{ band1.enter }}" onMouseLeave="{{ bandLeave }}" onClick="{{ band1.pick }}" style="cursor:pointer;transition:fill .35s,stroke .35s"><title>{{ band1.t }}</title></path>
+            <path d="M130,1084 L2475,1084 L2475,1096 L2458,1096 L2458,1352 L1900,1345 L150,1312 L150,1100 L130,1096 Z" fill="{{ band0.fill }}" stroke="{{ band0.stroke }}" stroke-width="3" stroke-linejoin="round" onMouseEnter="{{ band0.enter }}" onMouseLeave="{{ bandLeave }}" onClick="{{ band0.pick }}" style="cursor:pointer;transition:fill .35s,stroke .35s"><title>{{ band0.t }}</title></path>
+            </svg>
+            <sc-for list="{{ bandTags }}" as="g" hint-placeholder-count="6">
+              <div style="position:absolute;left:-1%;top:{{ g.y }};transform:translate(-100%,-50%);display:flex;align-items:center;gap:8px;pointer-events:none;color:{{ g.c }};transition:color .3s">
+                <span style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1;font-weight:400">{{ g.n }}</span>
+                <span style="width:{{ g.w }};height:1px;background:currentColor;transition:width .35s"></span>
+              </div>
+            </sc-for>
+            <sc-if value="{{ tip.on }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;left:50%;top:{{ tip.y }};transform:translate(-50%,-50%);pointer-events:none;background:#151c29;color:#ffffff;padding:8px 16px;border-radius:0;font-size:14px;white-space:nowrap;display:flex;gap:10px;align-items:center;box-shadow:0 10px 30px rgba(21,28,41,.25)">
+                <span style="font-family:'Source Serif 4',serif;font-size:18px;line-height:1">{{ tip.t }}</span>
+                <span style="opacity:.75">{{ tip.s }}</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+
+        <div style="position:absolute;inset:0;opacity:{{ pOp }};transform:scale({{ pSc }});pointer-events:{{ pPe }};transition:opacity .6s ease .15s,transform .9s cubic-bezier(.2,.7,.2,1)">
+          <div style="position:absolute;left:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:4;padding:6px;background:rgba(255,255,255,.92);box-shadow:0 0 0 1px #e4e2dc;border-radius:0">
+            <sc-for list="{{ rail }}" as="r" hint-placeholder-count="6">
+              <button onClick="{{ r.pick }}" title="{{ r.t }}" style="all:unset;cursor:pointer;width:34px;height:34px;border-radius:0;display:grid;place-items:center;font-family:'Source Serif 4',serif;font-size:18px;background:{{ r.bg }};color:{{ r.fg }};transition:background .3s,color .3s" style-hover="background:#e4e2dc">{{ r.n }}</button>
+            </sc-for>
+          </div>
+          <div style="position:absolute;top:56px;right:16px;bottom:16px;left:72px;container-type:size;display:flex;align-items:center;justify-content:center">
+            <div style="position:relative;width:{{ planW }};height:{{ planH }};overflow:hidden;opacity:{{ planOp }};transition:opacity .25s">
+              <div style="position:absolute;inset:0;transform-origin:0 0;transform:{{ zoomT }};transition:transform .9s cubic-bezier(.2,.7,.2,1)">
+                <img loading="lazy" src="{{ planSrc }}" alt="{{ planAlt }}" style="position:absolute;inset:0;width:100%;height:100%;user-select:none" draggable="false"></img>
+                <sc-for list="{{ amPins }}" as="m" hint-placeholder-count="0">
+                  <div style="position:absolute;left:{{ m.x }};top:{{ m.y }};transform:translate(-50%,-50%) scale({{ inv }});transition:transform .9s cubic-bezier(.2,.7,.2,1);pointer-events:none">
+                    <span style="display:block;padding:3px 9px;background:#f3f1ec;border-radius:0;font-family:'Source Serif 4',serif;font-style:normal;font-size:16px;white-space:nowrap;color:#4a5160;box-shadow:0 0 0 1px #e4e2dc">{{ m.t }}</span>
+                  </div>
+                </sc-for>
+                <sc-for list="{{ pins }}" as="p" hint-placeholder-count="0">
+                  <button onClick="{{ p.pick }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="all:unset;cursor:pointer;position:absolute;left:{{ p.x }};top:{{ p.y }};z-index:{{ p.z }};transform:translate(-50%,-50%) scale({{ inv }});opacity:{{ p.op }};transition:opacity .4s ease {{ p.delay }},transform .9s cubic-bezier(.2,.7,.2,1)">
+                    <span style="display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:0;font-size:14px;font-weight:500;white-space:nowrap;background:{{ p.bg }};color:{{ p.fg }};box-shadow:{{ p.sh }};transition:background .25s,color .25s,box-shadow .25s">{{ p.label }}</span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+          <div style="position:absolute;left:72px;bottom:14px;z-index:5;display:flex;flex-direction:column;align-items:flex-start;gap:10px;max-width:calc(100% - 100px)">
+            <sc-if value="{{ mmHas }}" hint-placeholder-val="{{ false }}">
+              <div style="background:#ffffff;box-shadow:0 0 0 1px #e4e2dc,0 18px 40px rgba(21,28,41,.14);padding:16px 18px;width:min(340px,100%);display:flex;flex-direction:column;gap:10px">
+                <div style="font-size:13px;letter-spacing:0;color:#6d7381">Łączone lokale · {{ mmCount }}</div>
+                <div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.1">{{ mmUnits }}</div>
+                <div style="display:flex;flex-direction:column;font-size:14px">
+                  <div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid #e4e2dc"><span style="color:#4a5160">Łączna powierzchnia</span><span style="font-weight:500">{{ mmArea }}</span></div>
+                  <div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid #e4e2dc"><span style="color:#4a5160">Cena szacunkowa</span><span style="font-weight:500">{{ mmPrice }}</span></div>
+                  <div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid #e4e2dc"><span style="color:#4a5160">Najem z opieką</span><span style="font-weight:500">{{ mmRent }}</span></div>
+                </div>
+                <sc-if value="{{ mmOne }}" hint-placeholder-val="{{ false }}"><div style="font-size:14px;color:#151c29">Dołącz sąsiedni lokal oznaczony „+”.</div></sc-if>
+                <div style="font-size:13px;color:#6d7381;line-height:1.6">Łączyć można tylko lokale sąsiadujące ze sobą. Ostateczne warunki potwierdzamy indywidualnie.</div>
+                <div style="display:flex;gap:8px">
+                  <button onClick="{{ mmAsk }}" style="all:unset;cursor:pointer;flex:1;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:transparent;color:#151c29;box-shadow:inset 0 0 0 1px #151c29;transition:background .3s,color .3s;font-size:15px;font-weight:500" style-hover="background:#151c29;color:#ffffff">Zapytaj o połączenie<span>→</span></button>
+                  <button onClick="{{ mmClear }}" style="all:unset;cursor:pointer;padding:10px 14px;border:1px solid #c5c3bc;font-size:14px" style-hover="background:#f3f1ec">Wyczyść</button>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ mmEmpty }}" hint-placeholder-val="{{ false }}">
+              <div style="background:#151c29;color:#ffffff;padding:9px 14px;font-size:14px">Wybierz lokal. Łączyć można tylko apartamenty ze wspólną ścianą (+)</div>
+            </sc-if>
+            <sc-if value="{{ mmOff }}" hint-placeholder-val="{{ true }}">
+              <button onClick="{{ mmToggle }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:8px 14px;background:#ffffff;box-shadow:0 0 0 1px #151c29;font-size:14px" style-hover="background:#f3f1ec"><span style="font-size:16px;line-height:1">+</span>Połącz lokale</button>
+            </sc-if>
+            <sc-if value="{{ mm }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ mmToggle }}" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:8px 14px;background:transparent;color:#151c29;box-shadow:inset 0 0 0 1px #151c29;transition:background .3s,color .3s;font-size:15px;font-weight:500" style-hover="background:#151c29;color:#ffffff"><span style="font-size:14px;line-height:1">✕</span>Zakończ łączenie</button>
+            </sc-if>
+          </div>
+          <div style="position:absolute;right:18px;bottom:14px;z-index:4;display:flex;gap:16px;font-size:13px;color:#4a5160">
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:0;background:#ffffff;box-shadow:0 0 0 1px #151c29"></span>Lokal</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:0;background:#f3f1ec;box-shadow:0 0 0 1px #e4e2dc"></span>Część wspólna</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1 1 340px;min-width:0;background:#ffffff;border:1px solid #e4e2dc;border-radius:0;padding:clamp(22px,2.4vw,34px);display:flex;flex-direction:column;max-height:clamp(560px,calc((100vw - 128px) * .38),760px);overflow:auto">
+        <sc-if value="{{ showFloors }}" hint-placeholder-val="{{ true }}">
+          <div style="font-size:13px;letter-spacing:0;color:#6d7381;margin-bottom:10px">Poziomy</div>
+          <div style="display:flex;flex-direction:column">
+            <sc-for list="{{ floorRows }}" as="f" hint-placeholder-count="6">
+              <button onClick="{{ f.pick }}" onMouseEnter="{{ f.enter }}" onMouseLeave="{{ bandLeave }}" style="all:unset;cursor:pointer;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:14px 10px;border-top:1px solid #e4e2dc;background:{{ f.bg }};transition:background .3s">
+                <span style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1;color:{{ f.c }}">{{ f.n }}</span>
+                <span style="display:flex;flex-direction:column;min-width:0">
+                  <span style="font-size:16px;font-weight:500">{{ f.t }}</span>
+                  <span style="font-size:14px;color:#4a5160;line-height:1.6">{{ f.s }}</span>
+                </span>
+                <span style="width:30px;height:30px;border-radius:0;display:grid;place-items:center;border:1px solid {{ f.c }};color:{{ f.c }};font-size:16px">→</span>
+              </button>
+            </sc-for>
+          </div>
+          <p style="margin:auto 0 0;padding-top:22px;font-size:14px;color:#6d7381;line-height:1.6">Na każdym piętrze winda i klatka schodowa w środkowej części budynku. Lokale mieszkalne zaczynają się od 1. piętra.</p>
+        </sc-if>
+
+        <sc-if value="{{ showList }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:13px;letter-spacing:0;color:#6d7381">Poziom {{ floorNum }}</div>
+          <h3 style="margin:8px 0 8px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1;letter-spacing:-.01em;text-wrap:balance">{{ floorName }}</h3>
+          <p style="margin:0 0 20px;color:#4a5160;font-size:16px;text-wrap:pretty">{{ floorDesc }}</p>
+          <sc-if value="{{ hasUnits }}" hint-placeholder-val="{{ true }}">
+
+            <div style="display:grid;grid-template-columns:64px 1fr 1fr 28px;gap:10px;padding:0 8px 8px;font-size:13px;letter-spacing:0;color:#6d7381;border-bottom:1px solid #e4e2dc"><span>Lokal</span><span>Powierzchnia</span><span>Strona</span><span></span></div>
+            <sc-for list="{{ unitRows }}" as="r" hint-placeholder-count="8">
+              <div onMouseEnter="{{ r.enter }}" onMouseLeave="{{ r.leave }}" style="display:grid;grid-template-columns:64px 1fr 1fr 28px;gap:10px;align-items:center;padding:11px 8px;border-bottom:1px solid #e4e2dc;background:{{ r.bg }};opacity:{{ r.op }};transition:background .25s,opacity .3s">
+                <button onClick="{{ r.pick }}" style="all:unset;cursor:pointer;font-family:'Source Serif 4',serif;font-size:24px;line-height:1">{{ r.id }}</button>
+                <button onClick="{{ r.pick }}" style="all:unset;cursor:pointer;font-size:16px;font-weight:500">{{ r.a }}</button>
+                <button onClick="{{ r.pick }}" style="all:unset;cursor:pointer;font-size:14px;color:#4a5160">{{ r.side }}</button>
+                <button onClick="{{ r.save }}" title="Zapisz" style="all:unset;cursor:pointer;width:28px;height:28px;display:grid;place-items:center;font-size:16px;color:{{ r.hc }}">{{ r.heart }}</button>
+              </div>
+            </sc-for>
+            <sc-if value="{{ noMatch }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:18px 0 0;font-size:14px;color:#6d7381">Żaden lokal na tym piętrze nie spełnia filtrów.</p>
+            </sc-if>
+          </sc-if>
+          <sc-if value="{{ noUnits }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ amRows }}" as="m" hint-placeholder-count="5">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid #e4e2dc;font-size:16px"><span>{{ m.t }}</span><span style="color:#4a5160">{{ m.a }}</span></div>
+              </sc-for>
+            </div>
+            <p style="margin:18px 0 0;font-size:14px;color:#6d7381">Na tym poziomie nie ma lokali mieszkalnych. Wybierz piętro 1–5 na pasku obok rzutu.</p>
+          </sc-if>
+        </sc-if>
+
+        <sc-if value="{{ hasUnit }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+            <button onClick="{{ unselect }}" style="all:unset;cursor:pointer;font-size:14px;color:#4a5160;display:flex;align-items:center;gap:8px" style-hover="color:#151c29">← Wszystkie lokale</button>
+            <div style="display:flex;gap:6px">
+              <button onClick="{{ prevUnit }}" title="Poprzedni lokal" style="all:unset;cursor:pointer;width:32px;height:32px;border-radius:0;display:grid;place-items:center;border:1px solid #c5c3bc" style-hover="background:#f3f1ec">‹</button>
+              <button onClick="{{ nextUnit }}" title="Następny lokal" style="all:unset;cursor:pointer;width:32px;height:32px;border-radius:0;display:grid;place-items:center;border:1px solid #c5c3bc" style-hover="background:#f3f1ec">›</button>
+            </div>
+          </div>
+          <div style="margin-top:22px;font-size:13px;letter-spacing:0;color:#6d7381">{{ u.kicker }}</div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:4px 16px;flex-wrap:wrap;margin:6px 0 20px">
+            <h3 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;text-wrap:balance;letter-spacing:-.02em">Lokal {{ u.id }}</h3>
+            <span style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1;font-weight:400">{{ u.a }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;margin-bottom:18px">
+            <sc-for list="{{ u.parts }}" as="q" hint-placeholder-count="2">
+              <div style="display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid #e4e2dc;font-size:16px"><span style="color:#4a5160">{{ q.t }}</span><span>{{ q.v }}</span></div>
+            </sc-for>
+            <div style="display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid #e4e2dc;font-size:16px"><span style="color:#4a5160">Strona</span><span>{{ u.sideLong }}</span></div>
+          </div>
+          <sc-if value="{{ unitNoNb }}" hint-placeholder-val="{{ false }}"><div style="padding:10px 0;margin-bottom:10px;font-size:14px;color:#6d7381;border-top:1px solid #e4e2dc">Tego lokalu nie można połączyć z sąsiednim, bo nie ma wspólnej ściany z innym apartamentem.</div></sc-if>
+          <sc-if value="{{ unitNb }}" hint-placeholder-val="{{ false }}"><button onClick="{{ mergeFromUnit }}" style="all:unset;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;margin-bottom:14px;border:1px dashed #6d7381;font-size:14px" style-hover="background:#f3f1ec;border-style:solid">Połącz z sąsiednim lokalem w większy apartament<span style="font-size:18px;line-height:1">+</span></button></sc-if>
+          <div style="background:#151c29;color:#ffffff;border-radius:0;padding:18px 20px;margin-bottom:14px">
+            <div style="display:flex;gap:4px;margin-bottom:14px">
+              <sc-for list="{{ uModes }}" as="o" hint-placeholder-count="2">
+                <button onClick="{{ o.pick }}" style="all:unset;cursor:pointer;padding:5px 12px;border-radius:0;font-size:14px;background:{{ o.bg }};color:{{ o.fg }};transition:background .25s,color .25s">{{ o.l }}</button>
+              </sc-for>
+            </div>
+            <div style="font-size:13px;letter-spacing:0;color:#e4e2dc">{{ u.priceHead }}</div>
+            <div style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1.1;font-weight:400">{{ u.price }}</div>
+            <div style="font-size:14px;color:#e4e2dc;margin-top:4px">{{ u.priceNote }}</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button onClick="{{ u.ask }}" style="all:unset;cursor:pointer;flex:1 1 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 6px 6px 20px;border-radius:0;background:transparent;color:#151c29;box-shadow:inset 0 0 0 1px #151c29;transition:background .3s,color .3s;font-size:15px;font-weight:500" style-hover="background:#151c29;color:#ffffff">Zapytaj o lokal {{ u.id }}<span style="width:34px;height:34px;border-radius:0;background:#ffffff;color:#151c29;display:grid;place-items:center">→</span></button>
+            <button onClick="{{ u.save }}" style="all:unset;cursor:pointer;padding:0 18px;border-radius:0;border:1px solid #151c29;font-size:14px;display:flex;align-items:center;gap:8px" style-hover="background:#f3f1ec">{{ u.saveL }}</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <sc-if value="{{ hasSaved }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:20px;background:#ffffff;border:1px solid #e4e2dc;border-radius:0;padding:16px 20px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px">
+          <span style="font-size:13px;letter-spacing:0;color:#6d7381">Zapisane ({{ savedCount }})</span>
+          <sc-for list="{{ savedChips }}" as="c" hint-placeholder-count="2">
+            <span style="display:flex;align-items:center;gap:4px;padding:3px 4px 3px 12px;border-radius:0;border:1px solid #c5c3bc;font-size:14px">
+              <button onClick="{{ c.go }}" style="all:unset;cursor:pointer">{{ c.l }}</button>
+              <button onClick="{{ c.rm }}" title="Usuń" style="all:unset;cursor:pointer;width:22px;height:22px;border-radius:0;display:grid;place-items:center;color:#6d7381" style-hover="background:#f3f1ec">×</button>
+            </span>
+          </sc-for>
+          <button onClick="{{ toggleCmp }}" style="all:unset;cursor:pointer;margin-left:auto;padding:7px 16px;border-radius:0;background:transparent;color:#151c29;box-shadow:inset 0 0 0 1px #151c29;font-size:14px;transition:background .3s,color .3s" style-hover="background:#151c29;color:#ffffff">{{ cmpL }}</button>
+        </div>
+        <sc-if value="{{ cmpOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="overflow-x:auto;margin-top:16px">
+            <table style="border-collapse:collapse;width:100%;min-width:480px;font-size:16px">
+              <thead><tr>
+                <th style="text-align:left;font-weight:400;font-size:13px;letter-spacing:0;color:#6d7381;padding:8px 12px 8px 0;border-bottom:1px solid #e4e2dc"></th>
+                <sc-for list="{{ cmpHead }}" as="h" hint-placeholder-count="2"><th style="text-align:left;font-weight:400;font-family:'Source Serif 4',serif;font-size:24px;padding:8px 12px;border-bottom:1px solid #e4e2dc">{{ h }}</th></sc-for>
+              </tr></thead>
+              <tbody>
+                <sc-for list="{{ cmpRows }}" as="row" hint-placeholder-count="5">
+                  <tr>
+                    <td style="padding:10px 12px 10px 0;border-bottom:1px solid #e4e2dc;color:#4a5160;white-space:nowrap">{{ row.k }}</td>
+                    <sc-for list="{{ row.v }}" as="cell" hint-placeholder-count="2"><td style="padding:10px 12px;border-bottom:1px solid #e4e2dc">{{ cell }}</td></sc-for>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+
+
+</sc-if>
+
+<sc-if value="{{ pg.udogodnienia }}" hint-placeholder-val="{{ false }}">
+<div>
+<section data-screen-label="Nagłówek: Udogodnienia" style="padding:calc(88px + clamp(56px,9vh,110px)) clamp(20px,3.2vw,60px) 0">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vh,44px)">
+    <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(64px,9vw,150px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Udogodnienia</h1>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px">
+      <p style="margin:0;max-width:44ch;font-size:18px;color:#4a5160;text-wrap:pretty">Basen, sauny, rehabilitacja, własna kuchnia i opieka przez całą dobę w jednym budynku.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 28px">
+        <sc-for list="{{ amNav }}" as="n" hint-placeholder-count="7">
+          <button onClick="{{ n.go }}" style="all:unset;cursor:pointer;font-size:16px;color:#4a5160;padding-bottom:2px;border-bottom:1px solid #c5c3bc;transition:color .25s,border-color .25s" style-hover="color:#151c29;border-bottom-color:#151c29">{{ n.l }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:relative;aspect-ratio:{{ amHeroAr }};overflow:hidden;background:#e4e2dc">
+      <img src="assets/udog/jadalnia.jpg" alt="Mieszkańcy przy wspólnym posiłku w jadalni" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%"></img>
+    </div>
+  </div>
+</section>
+
+<sc-for list="{{ amCats }}" as="c" hint-placeholder-count="0">
+<section data-am-sec="{{ c.k }}" data-screen-label="{{ c.l }}" style="scroll-margin-top:110px;padding:clamp(64px,9vh,120px) clamp(20px,3.2vw,60px) 0">
+  <div style="max-width:1680px;margin:0 auto;padding-top:24px;border-top:1px solid #151c29;display:flex;flex-wrap:wrap;gap:32px clamp(40px,5vw,96px);align-items:flex-start">
+    <div style="flex:1 1 300px;max-width:520px;position:{{ amStick }};top:120px;display:flex;flex-direction:column;gap:16px"><h2 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1.1;text-wrap:balance;letter-spacing:-.02em">{{ c.l }}</h2><p style="margin:0;color:#4a5160;max-width:40ch;text-wrap:pretty">{{ c.lead }}</p></div>
+    <div style="flex:2 1 560px;min-width:0;display:flex;flex-direction:column;gap:clamp(32px,4vh,48px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:36px 24px">
+        <sc-for list="{{ c.photos }}" as="p" hint-placeholder-count="0">
+          <figure style="margin:0;grid-column:{{ p.span }};display:flex;flex-direction:column;gap:14px">
+            <div style="aspect-ratio:{{ p.ar }};overflow:hidden;background:#f3f1ec"><img src="{{ p.img }}" alt="{{ p.t }}" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:{{ p.pos }}"></img></div>
+            <figcaption style="display:flex;flex-direction:column;gap:4px">
+              <span style="font-size:16px;font-weight:500">{{ p.t }}</span>
+              <span style="color:#4a5160;max-width:52ch;text-wrap:pretty">{{ p.d }}</span>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+      <sc-if value="{{ c.hasTexts }}" hint-placeholder-val="{{ false }}">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 24px;border-bottom:1px solid #e4e2dc">
+          <sc-for list="{{ c.texts }}" as="t" hint-placeholder-count="2">
+            <div style="padding:18px 0;border-top:1px solid #e4e2dc;display:flex;flex-direction:column;gap:4px">
+              <span style="font-size:16px;font-weight:500">{{ t.t }}</span>
+              <span style="color:#4a5160">{{ t.d }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if></div>
+  </div>
+</section>
+</sc-for>
+
+<section data-am-sec="5" data-screen-label="W cenie pobytu" style="scroll-margin-top:110px;padding:clamp(64px,9vh,120px) clamp(20px,3.2vw,60px) clamp(80px,11vh,140px)">
+  <div style="max-width:1680px;margin:0 auto;padding-top:24px;border-top:1px solid #151c29;display:flex;flex-wrap:wrap;gap:32px clamp(40px,5vw,96px);align-items:flex-start">
+    <div style="flex:1 1 300px;max-width:520px;position:{{ amStick }};top:120px;display:flex;flex-direction:column;gap:16px"><h2 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1.1;text-wrap:balance;letter-spacing:-.02em">W cenie pobytu</h2><p style="margin:0;color:#4a5160;max-width:40ch;text-wrap:pretty">Usługi codzienne, bez dodatkowych opłat.</p></div>
+    <div style="flex:2 1 560px;min-width:0;display:flex;flex-direction:column;gap:clamp(32px,4vh,48px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 24px;border-bottom:1px solid #e4e2dc">
+        <sc-for list="{{ incl }}" as="i" hint-placeholder-count="6">
+          <div style="padding:18px 0;border-top:1px solid #e4e2dc;display:flex;flex-direction:column;gap:4px">
+            <span style="font-size:16px;font-weight:500">{{ i.t }}</span>
+            <span style="color:#4a5160">{{ i.d }}</span>
+          </div>
+        </sc-for>
+      </div></div>
+  </div>
+</section>
+
+<section data-am-sec="6" data-screen-label="Uzdrowisko" style="scroll-margin-top:140px;background:#151c29;color:#ffffff;padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px clamp(40px,6vw,100px);align-items:flex-end">
+      <div>
+        <h2 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Uzdrowisko w zasięgu spaceru</h2>
+      </div>
+      <p style="margin:0;max-width:46ch;font-size:18px;color:#b5bac3;text-wrap:pretty">Pijalnia wód, tężnia i aleje parku zdrojowego są w zasięgu spaceru. Zabiegi w miejscowych sanatoriach umawiamy i organizujemy dojazd.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));margin-top:clamp(48px,7vh,80px);gap:0 40px">
+      <div style="padding:24px 0;border-top:1px solid rgba(255,255,255,.28)"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.1;margin-bottom:10px">Pijalnia wód</div><div style="font-size:16px;color:#b5bac3">Wody mineralne z iwonickich źródeł, w drodze na poranny spacer.</div></div>
+      <div style="padding:24px 0;border-top:1px solid rgba(255,255,255,.28)"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.1;margin-bottom:10px">Tężnia</div><div style="font-size:16px;color:#b5bac3">Solankowy mikroklimat, ławki w cieniu i spokojne popołudnia.</div></div>
+      <div style="padding:24px 0;border-top:1px solid rgba(255,255,255,.28)"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.1;margin-bottom:10px">Park zdrojowy</div><div style="font-size:16px;color:#b5bac3">Płaskie aleje bez stromych podejść, także dla wózków i balkoników.</div></div>
+      <div style="padding:24px 0;border-top:1px solid rgba(255,255,255,.28)"><div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.1;margin-bottom:10px">Sanatoria</div><div style="font-size:16px;color:#b5bac3">Borowina, kąpiele solankowe i inhalacje. Umawiamy termin i dowozimy.</div></div>
+    </div>
+  </div>
+</section>
+</div>
+
+</sc-if>
+
+<sc-if value="{{ pg.cennik }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Nagłówek: Cennik" style="padding:calc(88px + clamp(56px,9vh,110px)) clamp(20px,3.2vw,60px) 0">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 60px;padding-bottom:clamp(28px,4vh,44px);border-bottom:1px solid #e4e2dc">
+    <div>
+            <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(64px,9vw,150px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Cennik</h1>
+    </div>
+      </div>
+</section>
+<section id="cennik" data-screen-label="Cennik" style="padding:clamp(48px,7vh,80px) clamp(20px,3.2vw,60px) clamp(80px,11vh,140px)">
+  <div style="max-width:1680px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px clamp(40px,6vw,100px);align-items:start">
+    <div>
+      
+      <h2 style="margin:0 0 18px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Kalkulator kosztów</h2>
+      <p style="margin:0 0 40px;color:#4a5160;max-width:42ch">Wybierz formę i metraż, a pokażemy pełny koszt z obowiązkowymi opłatami.</p>
+      <div style="display:flex;flex-direction:column;gap:30px">
+        <div>
+          <div style="font-size:14px;font-weight:500;margin-bottom:10px">Forma</div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:4px;background:#f3f1ec;border-radius:0">
+            <sc-for list="{{ pModes }}" as="m" hint-placeholder-count="3">
+              <button onClick="{{ m.pick }}" style="all:unset;cursor:pointer;text-align:center;padding:10px 8px;border-radius:0;background:{{ m.bg }};color:{{ m.fg }};font-size:14px;line-height:1.2;transition:background .3s,color .3s">{{ m.l }}</button>
+            </sc-for>
+          </div>
+          <div style="font-size:14px;color:#4a5160;margin-top:10px">{{ pKicker }}</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+            <span style="font-size:14px;font-weight:500">Metraż apartamentu</span>
+            <span style="font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);line-height:1">{{ area }} m²</span>
+          </div>
+          <div style="position:relative;height:36px;margin:12px 0 4px">
+            <div style="position:absolute;left:0;right:0;top:17px;height:2px;border-radius:0;background:#e4e2dc"></div>
+            <div style="position:absolute;left:0;top:17px;height:2px;border-radius:0;width:{{ areaPct }};background:#151c29"></div>
+            <div style="position:absolute;top:6px;left:{{ areaPct }};width:24px;height:24px;margin-left:-12px;border-radius:0;background:#151c29;box-shadow:0 0 0 5px #ffffff;pointer-events:none"></div>
+            <input type="range" min="25" max="65" step="1" value="{{ area }}" onChange="{{ setArea }}" aria-label="Metraż apartamentu" style="position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:grab"></input>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14px;color:#6d7381"><span>25 m²</span><span>65 m²</span></div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px">
+            <sc-for list="{{ presets }}" as="q" hint-placeholder-count="3">
+              <button onClick="{{ q.pick }}" style="all:unset;cursor:pointer;padding:14px;border-radius:0;border:1px solid {{ q.bd }};background:{{ q.bg }};transition:border-color .3s,background .3s">
+                <span style="display:block;font-size:16px;font-weight:500">{{ q.l }}</span>
+                <span style="display:block;font-size:14px;color:#4a5160;margin-top:2px">{{ q.s }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:sticky;top:110px;background:#151c29;color:#ffffff;border-radius:0;padding:clamp(26px,3vw,44px)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+        <span style="font-size:13px;font-weight:500;letter-spacing:0;color:#e4e2dc">{{ pHead }}</span>
+        <div style="display:flex;gap:4px;padding:3px;border-radius:0;background:#2d3546">
+          <sc-for list="{{ curs }}" as="c" hint-placeholder-count="3">
+            <button onClick="{{ c.pick }}" style="all:unset;cursor:pointer;padding:4px 10px;border-radius:0;font-size:13px;background:{{ c.bg }};color:{{ c.fg }}">{{ c.l }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin:10px 0 6px;flex-wrap:wrap"><span style="font-family:'Source Serif 4',serif;font-size:clamp(40px,4.4vw,72px);line-height:1;font-weight:400">{{ pTotal }}</span><span style="font-size:16px;color:#e4e2dc">{{ pUnit }}</span></div>
+      <div style="font-size:14px;color:#e4e2dc;margin-bottom:30px">{{ pNote }}</div>
+      <div style="display:flex;flex-direction:column">
+        <sc-for list="{{ pLines }}" as="l" hint-placeholder-count="3">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid #2d3546">
+            <div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:16px">{{ l.t }}<sc-if value="{{ l.req }}" hint-placeholder-val="{{ false }}"><span style="padding:1px 8px;border:1px solid #4a5160;border-radius:0;font-size:13px;color:#e4e2dc">obowiązkowe</span></sc-if></div><div style="font-size:14px;color:#c5c3bc;line-height:1.6">{{ l.d }}</div></div>
+            <div style="font-size:16px;white-space:nowrap;text-align:right">{{ l.v }}<div style="font-size:13px;color:#c5c3bc">{{ l.u }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+      <a href="#/kontakt" onClick="{{ pAsk }}" style="display:block;margin-top:24px;text-align:center;padding:15px;border-radius:0;background:transparent;color:#ffffff;box-shadow:inset 0 0 0 1px #ffffff;transition:background .3s,color .3s;font-size:16px;text-decoration:none" style-hover="background:#ffffff;color:#151c29">Zapytaj o apartament</a>
+      <p style="margin:18px 0 0;font-size:13px;line-height:1.6;color:#6d7381">Wartości szacunkowe, wyliczone liniowo w widełkach cenowych inwestycji. Nie stanowią oferty w rozumieniu art. 66 § 1 Kodeksu cywilnego.</p>
+    </div>
+  </div>
+</section>
+
+</sc-if>
+
+<sc-if value="{{ pg.galeria }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Nagłówek: Galeria" style="padding:calc(88px + clamp(56px,9vh,110px)) clamp(20px,3.2vw,60px) 0">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 60px;padding-bottom:clamp(28px,4vh,44px);border-bottom:1px solid #e4e2dc">
+    <div>
+            <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(64px,9vw,150px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Galeria</h1>
+    </div>
+    <p style="margin:0;max-width:38ch;color:#4a5160;text-wrap:pretty">Willa w dzień i po zmroku, od ogrodu, od podjazdu i znad doliny.</p>
+  </div>
+</section>
+<section id="galeria" data-screen-label="Galeria" style="padding:clamp(48px,7vh,80px) clamp(20px,3.2vw,60px) clamp(80px,11vh,140px)">
+  <div style="max-width:1680px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px">
+    <sc-for list="{{ galAll }}" as="g" hint-placeholder-count="7">
+      <button onClick="{{ g.open }}" style="all:unset;cursor:zoom-in;position:relative;overflow:hidden;background:#f3f1ec;aspect-ratio:{{ g.ar }};grid-column:{{ g.col }}">
+        <img loading="lazy" src="{{ g.src }}" alt="{{ g.c }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.04)"></img>
+        <span style="position:absolute;left:0;bottom:0;padding:10px 14px;background:#ffffff;color:#151c29;font-size:14px;pointer-events:none">{{ g.c }}</span>
+      </button>
+    </sc-for>
+  </div>
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ lbClose }}" style="position:fixed;inset:0;z-index:100;background:rgba(21,28,41,.94);display:flex;flex-direction:column;color:#ffffff">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,4vw,48px);font-size:14px"><span>{{ lbCount }}</span><button onClick="{{ lbClose }}" style="all:unset;cursor:pointer;font-size:14px;padding:8px 0;border-bottom:1px solid #ffffff">Zamknij</button></div>
+      <div style="flex:1;min-height:0;display:flex;align-items:center;gap:16px;padding:0 clamp(12px,3vw,40px)">
+        <button onClick="{{ lbPrev }}" aria-label="Poprzednie" style="all:unset;cursor:pointer;padding:12px;color:#ffffff"><svg width="34" height="16" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M33 8H2M8 1L1 8l7 7"></path></svg></button>
+        <figure onClick="{{ stop }}" style="flex:1;min-width:0;height:100%;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+          <img loading="lazy" src="{{ lbSrc }}" alt="{{ lbCap }}" style="max-width:100%;max-height:calc(100% - 40px);object-fit:contain;border-radius:0"></img>
+          <figcaption style="font-family:'Source Serif 4',serif;font-size:24px">{{ lbCap }}</figcaption>
+        </figure>
+        <button onClick="{{ lbNext }}" aria-label="Następne" style="all:unset;cursor:pointer;padding:12px;color:#ffffff"><svg width="34" height="16" viewBox="0 0 34 16" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 8h31M26 1l7 7-7 7"></path></svg></button>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:center;padding:20px;overflow-x:auto">
+        <sc-for list="{{ lbThumbs }}" as="t" hint-placeholder-count="6">
+          <button onClick="{{ t.pick }}" style="all:unset;cursor:pointer;flex:none;width:72px;height:52px;border-radius:0;overflow:hidden;opacity:{{ t.o }};outline:{{ t.ol }};outline-offset:2px;transition:opacity .3s"><img loading="lazy" src="{{ t.src }}" alt="" style="width:100%;height:100%;object-fit:cover"></img></button>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+</section>
+
+</sc-if>
+
+<sc-if value="{{ pg.kontakt }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Nagłówek: Kontakt" style="padding:calc(88px + clamp(56px,9vh,110px)) clamp(20px,3.2vw,60px) 0">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 60px;padding-bottom:clamp(28px,4vh,44px);border-bottom:1px solid #e4e2dc">
+    <div>
+            <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(64px,9vw,150px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Kontakt</h1>
+    </div>
+    <p style="margin:0;max-width:38ch;color:#4a5160;text-wrap:pretty">Oprowadzimy po willi, pokażemy apartamenty i opowiemy o opiece i finansowaniu.</p>
+  </div>
+</section>
+<section id="kontakt" data-screen-label="Kontakt" style="position:relative;overflow:hidden;background:#151c29;color:#ffffff">
+  <img loading="lazy" src="assets/v5/naroznik-noc.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32"></img>
+  <div style="position:relative;max-width:1680px;margin:0 auto;padding:clamp(110px,15vh,180px) clamp(20px,3.2vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:56px clamp(48px,7vw,110px)">
+    <div>
+      <h2 style="margin:0 0 24px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Napisz lub zadzwoń</h2>
+      <p style="margin:0 0 40px;color:#e4e2dc;max-width:40ch">Zapraszamy na wizytę. Oprowadzimy po willi, pokażemy pokoje i opowiemy o opiece i finansowaniu pobytu.</p>
+      <a href="tel:+48516066067" style="display:block;font-family:'Source Serif 4',serif;font-size:clamp(28px,2.6vw,40px);color:#ffffff;text-decoration:none">+48 516 066 067</a>
+      <a href="mailto:kontakt@willazdroj.pl" style="color:#e4e2dc;text-decoration:none">kontakt@willazdroj.pl</a>
+    </div>
+    <div style="background:#ffffff;color:#151c29;border-radius:0;padding:clamp(24px,3vw,40px)">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:22px">
+          <label style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:500">Imię i nazwisko</span><input required="" style="border:0;border-bottom:1px solid #c5c3bc;background:transparent;padding:8px 0;font-size:18px;color:#151c29;outline:none" style-focus="border-bottom-color:#151c29"></input></label>
+          <label style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:500">Telefon</span><input type="tel" required="" style="border:0;border-bottom:1px solid #c5c3bc;background:transparent;padding:8px 0;font-size:18px;color:#151c29;outline:none" style-focus="border-bottom-color:#151c29"></input></label>
+          <label style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:500">Wiadomość</span><textarea rows="3" value="{{ msg }}" onChange="{{ setMsg }}" style="border:0;border-bottom:1px solid #c5c3bc;background:transparent;padding:8px 0;font-size:18px;color:#151c29;outline:none;resize:vertical" style-focus="border-bottom-color:#151c29"></textarea></label>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#4a5160;cursor:pointer"><input type="checkbox" required="" style="accent-color:#151c29;width:16px;height:16px;margin-top:3px"></input><span>Wyrażam zgodę na kontakt w sprawie wizyty.</span></label>
+          <button type="submit" style="all:unset;cursor:pointer;text-align:center;padding:15px;border-radius:0;background:transparent;color:#151c29;box-shadow:inset 0 0 0 1px #151c29;transition:background .3s,color .3s;font-size:15px;font-weight:500" style-hover="background:#151c29;color:#ffffff">Wyślij zapytanie</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <h3 style="margin:0 0 10px;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(28px,2.6vw,40px);letter-spacing:-.01em;text-wrap:balance">Dziękujemy</h3>
+          <p style="margin:0 0 22px;color:#4a5160">Oddzwonimy, aby ustalić termin wizyty.</p>
+          <button onClick="{{ reset }}" style="all:unset;cursor:pointer;font-size:14px;font-weight:500;border-bottom:1px solid #151c29;padding-bottom:4px">Wyślij kolejne</button>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+</sc-if>
+
+</div>
+
+<section data-screen-label="Mapa i dojazd" style="background:#ffffff;padding:clamp(80px,11vh,140px) clamp(20px,3.2vw,60px)">
+  <div style="max-width:1680px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 60px;margin-bottom:clamp(28px,4vh,44px)">
+    <h2 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(40px,4.4vw,72px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Jak <span>do nas trafić</span></h2>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Kulczy%C5%84skiego+8%2C+38-440+Iwonicz-Zdr%C3%B3j" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:18px;padding:14px 22px;border:1px solid #151c29;color:#151c29;font-size:15px;text-decoration:none;transition:background .3s,color .3s;font-weight:500" style-hover="background:#151c29;color:#ffffff">Wyznacz trasę<span>→</span></a>
+  </div>
+  <div style="max-width:1680px;margin:0 auto;position:relative;height:clamp(560px,72vh,720px);background:#f3f1ec;overflow:hidden">
+    <iframe src="https://maps.google.com/maps?q=Kulczy%C5%84skiego%208%2C%2038-440%20Iwonicz-Zdr%C3%B3j&amp;z=16&amp;hl=pl&amp;output=embed" referrerpolicy="no-referrer-when-downgrade" title="Mapa: Willa Zdrój, ul. Kulczyńskiego 8, Iwonicz-Zdrój" loading="lazy" style="filter:grayscale(1) sepia(.1) contrast(1.02);position:absolute;left:-90px;top:-130px;width:calc(100% + 180px);height:calc(100% + 260px);border:0"></iframe>
+    <div style="position:absolute;left:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);z-index:2;background:#151c29;color:#ffffff;padding:clamp(20px,2.2vw,30px);width:min(380px,calc(100% - 24px));display:flex;flex-direction:column;gap:20px;box-shadow:0 18px 40px rgba(21,28,41,.28)">
+      <div style="font-size:13px;letter-spacing:0;color:#c9a86f">Adres</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:24px;line-height:1.2"><span style="white-space:nowrap">ul. Kulczyńskiego 8</span><br><span style="white-space:nowrap">38‑440 Iwonicz‑Zdrój</span></div>
+      <div style="display:flex;flex-direction:column;gap:4px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:14px">
+        <span style="font-size:13px;letter-spacing:0;color:#c9a86f;padding-bottom:6px">Kontakt</span>
+        <a href="tel:+48516066067" style="color:#ffffff;text-decoration:none;font-size:18px" style-hover="color:#c9a86f">+48 516 066 067</a>
+        <span style="color:#b5bac3">Wizyty po wcześniejszym umówieniu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#151c29;color:#b5bac3;padding:56px clamp(20px,3.2vw,60px) 32px;font-size:14px">
+  <div style="max-width:1680px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;padding-bottom:40px;border-bottom:1px solid #2d3546">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;color:#ffffff">
+        <svg width="220" height="123" viewBox="0 2 240 134" fill="none" stroke="#ffffff" stroke-width="1.1" stroke-linejoin="miter" stroke-linecap="square" aria-hidden="true" style="display:block;flex:none"><path d="M60 9H180L197 24H43Z"></path><path d="M40 24H200V28H40Z"></path><path d="M46 28V72"></path><path d="M194 28V72"></path><path d="M44 46H196"></path><path d="M73.5 20V14.5H81.5V20"></path><path d="M95 20V14.5H103V20"></path><path d="M116 20V14.5H124V20"></path><path d="M137 20V14.5H145V20"></path><path d="M158.5 20V14.5H166.5V20"></path><path d="M52.5 33h8v9h-8Z"></path><path d="M56.5 33v9"></path><path d="M73.5 33h8v9h-8Z"></path><path d="M77.5 33v9"></path><path d="M95 33h8v9h-8Z"></path><path d="M99 33v9"></path><path d="M116 33h8v9h-8Z"></path><path d="M120 33v9"></path><path d="M137 33h8v9h-8Z"></path><path d="M141 33v9"></path><path d="M158.5 33h8v9h-8Z"></path><path d="M162.5 33v9"></path><path d="M179.5 33h8v9h-8Z"></path><path d="M183.5 33v9"></path><path d="M52.5 51h8v15h-8Z"></path><path d="M56.5 51v15"></path><path d="M51 62q5.5 4 11 0"></path><path d="M73.5 51h8v15h-8Z"></path><path d="M77.5 51v15"></path><path d="M72 62q5.5 4 11 0"></path><path d="M95 51h8v15h-8Z"></path><path d="M99 51v15"></path><path d="M93.5 62q5.5 4 11 0"></path><path d="M116 51h8v15h-8Z"></path><path d="M120 51v15"></path><path d="M114.5 62q5.5 4 11 0"></path><path d="M137 51h8v15h-8Z"></path><path d="M141 51v15"></path><path d="M135.5 62q5.5 4 11 0"></path><path d="M158.5 51h8v15h-8Z"></path><path d="M162.5 51v15"></path><path d="M157 62q5.5 4 11 0"></path><path d="M179.5 51h8v15h-8Z"></path><path d="M183.5 51v15"></path><path d="M178 62q5.5 4 11 0"></path><path d="M22 72H202"></path><path d="M22 77H202"></path><path d="M22 72V77"></path><path d="M56.5 72V77"></path><path d="M77.5 72V77"></path><path d="M99 72V77"></path><path d="M120 72V77"></path><path d="M141 72V77"></path><path d="M162.5 72V77"></path><path d="M183.5 72V77"></path><path d="M67 72V77"></path><path d="M88.5 72V77"></path><path d="M109.5 72V77"></path><path d="M130.5 72V77"></path><path d="M152 72V77"></path><path d="M173 72V77"></path><path d="M202 72V77"></path><path d="M16 128V90Q16 80 28 79H204V128"></path><path d="M19 86h6v13h-6Z"></path><path d="M50 85h13v14h-13Z"></path><path d="M56.5 85v14"></path><path d="M71 85h13v14h-13Z"></path><path d="M77.5 85v14"></path><path d="M92.5 85h13v14h-13Z"></path><path d="M99 85v14"></path><path d="M113.5 85h13v14h-13Z"></path><path d="M120 85v14"></path><path d="M134.5 85h13v14h-13Z"></path><path d="M141 85v14"></path><path d="M156 85h13v14h-13Z"></path><path d="M162.5 85v14"></path><path d="M177 85h13v14h-13Z"></path><path d="M183.5 85v14"></path><path d="M16 104H204"></path><path d="M19 110h6v18h-6Z"></path><path d="M50 128V110h13v18"></path><path d="M56.5 110V128"></path><path d="M71 128V110h13v18"></path><path d="M77.5 110V128"></path><path d="M92.5 128V110h13v18"></path><path d="M99 110V128"></path><path d="M113.5 128V110h13v18"></path><path d="M120 110V128"></path><path d="M134.5 128V110h13v18"></path><path d="M141 110V128"></path><path d="M156.5 128V108h12v20"></path><path d="M162.5 108V128"></path><path d="M177 128V110h13v18"></path><path d="M183.5 110V128"></path><path d="M204 128V102A14 14 0 0 1 232 102V128"></path><path d="M211 102A7 7 0 0 1 225 102Z"></path><path d="M4 128H236"></path></svg>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:11px">
+          <div style="font-family:'Cinzel',serif;font-weight:500;font-size:clamp(28px,2.6vw,40px);letter-spacing:.12em;margin-right:-.12em;line-height:1">WILLA ZDRÓJ</div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:500;font-size:10px;letter-spacing:.5em;margin-right:-.5em">LUKSUSOWY DOM SENIORA</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 28px"><a href="#/apartamenty" style="color:#ffffff;text-decoration:none">Apartamenty</a><a href="#/udogodnienia" style="color:#ffffff;text-decoration:none">Udogodnienia</a><a href="#/cennik" style="color:#ffffff;text-decoration:none">Cennik</a><a href="#/galeria" style="color:#ffffff;text-decoration:none">Galeria</a><a href="#/kontakt" style="color:#ffffff;text-decoration:none">Kontakt</a><a href="#/" style="color:#ffffff;text-decoration:none">Polityka prywatności</a></div>
+    </div>
+    <div style="padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:#b5bac3">
+      <span style="max-width:80ch;line-height:1.6">Inwestor: Capital Towers Rent Apartments sp. z o.o. · ul. Podwisłocze 27/231, 35‑309 Rzeszów · KRS 0000970511 · NIP 8133808573 · REGON 382854571</span>
+      <span>Wizualizacje mają charakter poglądowy.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { amH: [0, 0, 0, 0, 0], amP: [0, 0, 0, 0, 0], amSec: 0, sk: false, ht: 0, merge: [], mm: false, mset: [], am: 0, pMode: 'dlugi', area: 34, cur: 'PLN', lb: null, nav: 'ink', floor: 2, mode: 'building', fl: 3, unit: null, hovFl: null, hovU: null, fSize: 'all', fSide: 'all', saved: [], cmp: false, fade: false, uMode: 'najem', page: 'home', pgOp: 1, dn: 50, idx: null, sMin: '', sMax: '', sFl: 'all', aMin: null, aMax: null, narrow: false, day: 0, amI: 0, tp: 'm', sent: false, stay: 'Pobyt stały', room: 'Jednoosobowy', when: '', msg: '' };
+  PL = {
+    0: { t: 'Parter', d: 'Kawiarnia z salą śniadaniową, lounge oraz bar z recepcją przy wejściu głównym.', h: 1052, u: [], am: [['Kawiarnia', 42.64, 18.9, 38.3], ['Sala śniadaniowa', 68.26, 37.8, 77.1], ['Bar i recepcja', 11.98, 56.4, 74.8], ['Hall', 25.52, 68.2, 63.5], ['Lounge', 27.95, 88.8, 76.9]] },
+    1: { t: 'Piętro 1', d: 'Strefa SPA z basenem z przeciwprądem 3 × 8 m, saunami i jacuzzi oraz 9 lokali, w tym największe w budynku.', h: 1650, u: [['1.1',13.93,4.15,0,11.9,60.5],['1.2',18.33,3.56,0,11.9,76.8],['1.3',24.36,8.21,0,28.1,78.9],['1.4',12.24,5.74,7.75,41.6,78],['1.5',12.37,4.52,5.02,50.7,77.7],['1.6',24.35,7.06,12.03,63.9,85.7],['1.7',11.79,6.69,7.54,78.1,85.7],['1.8',13.41,5.95,9.36,87.8,85.8],['1.9',17.18,4.9,0,89,43.6]], am: [['Basen 3 × 8 m', 0, 77.8, 16.4], ['Jacuzzi', 0, 15.3, 13.8], ['Sauna mokra', 0, 25.3, 33.5], ['Sauna sucha', 0, 33, 28.5], ['Recepcja SPA', 0, 56.7, 22.9]] },
+    2: { t: 'Piętro 2', d: 'Gabinety zabiegowe, przeszklona strefa odpoczynku i 8 lokali, pięć od frontu z prywatnym tarasem.', h: 1484, u: [['2.1',19.33,7.94,0,27.8,50.1],['2.2',13.36,3.1,0,79.9,49.9],['2.3',11.2,3.49,0,89.1,41.5],['2.4',11.18,5.74,0,90.4,68.3],['2.5',11.49,5.9,0,69.9,67.3],['2.6',11.9,5.56,0,62.3,69.2],['2.7',11.38,5.73,0,40.8,69.1],['2.8',19.11,4.14,0,31.9,67.6]], am: [['Gabinety zabiegowe', 51.31, 50.7, 10.8], ['Strefa odpoczynku', 17.87, 12.5, 10.8], ['Tarasy prywatne', 55.7, 45.7, 88]] },
+    3: { t: 'Piętro 3', d: '10 lokali po obu stronach korytarza, z windą przy klatce schodowej.', h: 991, u: [['3.1',14.48,4.11,0,12,38.6],['3.2',15.43,5.07,0,35.7,37.2],['3.3',8.79,3.7,0,45.9,24.1],['3.4',14.48,3.21,0,77.5,38.6],['3.5',11.67,3.72,0,87.8,25.5],['3.6',16.13,3.45,0,89.5,69.4],['3.7',13.21,4.3,0,63.9,68.5],['3.8',15.48,3.97,0,55.4,68.5],['3.9',12.42,4.18,0,30.5,68.5],['3.10',18.32,3.94,0,21.6,68.5]], am: [] },
+    4: { t: 'Piętro 4', d: '10 lokali, w tym dwa narożne powyżej 24 m².', h: 946, u: [['4.1',20.89,4.33,0,18.1,17.6],['4.2',16.83,4.6,0,29.1,18],['4.3',9.13,3.81,0,45.4,17.6],['4.4',15.02,3.39,0,78.2,35.9],['4.5',12.27,3.68,0,87.4,20],['4.6',13.99,5.04,0,90.6,69],['4.7',13.36,5.45,0,68.1,67.6],['4.8',12.54,5.47,0,57.6,68.5],['4.9',12.55,6.38,0,34.4,68.5],['4.10',20.6,4.04,0,21.8,68.5]], am: [] },
+    5: { t: 'Poddasze', d: '9 kameralnych lokali pod skosami dachu, z oknami połaciowymi.', h: 958, u: [['5.1',12.04,3.99,0,19.5,31.1],['5.2',15.29,4.33,0,35.6,32.5],['5.3',8.25,3.6,0,48.5,21.2],['5.4',19.07,3.77,0,84.5,31.3],['5.5',7.36,4.59,0,87.8,71.1],['5.6',9.61,3.66,0,68.2,73.5],['5.7',10.02,4.85,0,54.9,73.5],['5.8',9.77,3.86,0,32.7,71.3],['5.9',12.01,3.99,0,21.8,72.3]], am: [] } };
+  BAND_Y = { 5: '10.7%', 4: '22.6%', 3: '38.3%', 2: '51.3%', 1: '65.2%', 0: '84%' };
+  openFloor(f) { if (this.state.unit) history.replaceState(null, '', '#/apartamenty'); if (this.state.mode === 'plan' && this.state.fl !== f) { this.setState({ fade: true, unit: null, hovU: null }); clearTimeout(this.ft); this.ft = setTimeout(() => this.setState({ fl: f, fade: false }), 220); } else this.setState({ mode: 'plan', fl: f, unit: null, hovU: null, hovFl: null }); }
+  vizRef = React.createRef(); cmpRef = React.createRef(); progRef = React.createRef();
+  dragCmp(e) { const el = this.cmpRef.current; if (!el) return; const r = el.getBoundingClientRect(); this.setState({ dn: Math.min(100, Math.max(0, (e.clientX - r.left) / r.width * 100)) }); } heroSec = React.createRef(); heroBg = React.createRef(); sketchImg = React.createRef(); photoImg = React.createRef(); photoWrap = React.createRef(); heroScale = React.createRef(); heroFog = React.createRef(); heroShade = React.createRef(); heroText = React.createRef(); heroBar = React.createRef(); heroHint = React.createRef(); heroCta = React.createRef(); willaSec = React.createRef(); idxRef = React.createRef(); idxImg = React.createRef(); willaTrack = React.createRef(); willaBar = React.createRef();
+  componentDidMount() {
+    const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+    this.onScroll = () => {
+      const sec = this.heroSec.current; if (!sec) { if (this.state.nav !== 'solid') this.setState({ nav: 'solid' }); return; }
+      if (this.heroText.current && this.heroBg.current) { const th = this.heroText.current.offsetHeight + 64; if (th !== this.th) { this.th = th; this.heroBg.current.style.setProperty('--txh', th + 'px'); } }
+      const vh = window.innerHeight, r = sec.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - vh)));
+      const rev = ss(.06, .55, p), ex = ss(.35, .8, p), bar = ss(.84, 1, p);
+      const sk = this.sketchImg.current, ph = this.photoImg.current;
+      if (ph) { const e = rev * 170 - 50; const m = `linear-gradient(to top,#000 ${e}%,transparent ${e + 50}%)`; ph.style.opacity = rev > 0 ? 1 : 0; ph.style.webkitMaskImage = m; ph.style.maskImage = m; ph.style.filter = `saturate(${.15 + .85 * ss(.2, .75, p)}) brightness(${1.12 - .12 * ss(.2, .75, p)})`; }
+      if (sk) sk.style.opacity = 1 - ss(.3, .72, p);
+      const hs = this.heroScale.current; if (hs) { const vw = innerWidth, th = this.th || 260, ar = 16 / 9;
+        const aw = vw * .96, ah = Math.max(120, vh - 92 - th); let fw = aw, fh = aw / ar; if (fh > ah) { fh = ah; fw = ah * ar; }
+        fw *= 1.14; fh *= 1.14; const fx = (vw - fw) / 2, fy = 92 + (ah - fh) / 2; let cw = vw * 1.04, ch = cw / ar; if (ch < vh * 1.04) { ch = vh * 1.04; cw = ch * ar; }
+        const cx = (vw - cw) / 2, cy = (vh - ch) / 2, L = (a, b) => a + (b - a) * ex;
+        hs.style.left = L(fx, cx) + 'px'; hs.style.top = L(fy, cy) + 'px'; hs.style.width = L(fw, cw) + 'px'; hs.style.height = L(fh, ch) + 'px'; }
+      if (this.heroFog.current) this.heroFog.current.style.opacity = 1 - ss(.3, .65, p);
+      if (this.heroShade.current) this.heroShade.current.style.opacity = ss(.55, .9, p);
+      if (this.heroText.current) { const k = ss(.55, .85, p), m = (a, b) => Math.round(a + (b - a) * k); this.heroText.current.style.color = `rgb(${m(21, 255)},${m(28, 255)},${m(41, 255)})`; this.heroText.current.style.transform = `translateY(${-p * 24}px)`; if (this.heroCta.current) { const cc = `rgb(${m(21, 255)},${m(28, 255)},${m(41, 255)})`; this.heroCta.current.style.color = cc; this.heroCta.current.style.borderColor = cc; } }
+      if (this.heroBar.current) { this.heroBar.current.style.opacity = bar; this.heroBar.current.style.transform = `translateY(${(1 - bar) * 100}%)`; this.heroBar.current.style.pointerEvents = bar > .5 ? 'auto' : 'none'; }
+      const mode = r.bottom <= 84 ? 'solid' : (ex > .6 ? 'light' : 'ink');
+      if (mode !== this.state.nav) this.setState({ nav: mode });
+    };
+    const pr = () => { const b = this.progRef.current; if (b) { const mx = document.documentElement.scrollHeight - innerHeight; b.style.transform = 'scaleX(' + (mx > 0 ? scrollY / mx : 0) + ')'; } };
+    this.mq = window.matchMedia('(max-width: 760px)'); this.mqf = () => this.setState({ narrow: this.mq.matches }); this.mqf(); this.mq.addEventListener('change', this.mqf);
+    this.hs = () => { const w = this.willaSec.current, t = this.willaTrack.current; if (!w || !t) return; const r = w.getBoundingClientRect(), p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - innerHeight))), n = t.children.length - 1; t.style.transform = 'translate3d(' + (-p * n * 100) + 'vw,0,0)'; if (this.willaBar.current) this.willaBar.current.style.transform = 'scaleX(' + p + ')'; };
+    this.skf = () => { const on = scrollY > 80; if (on !== this.state.sk) this.setState({ sk: on }); }; window.addEventListener('scroll', this.skf, { passive: true }); this.skf();
+    this.amf = () => { const els = document.querySelectorAll('[data-am-sec]'); if (!els.length) return; let a = 0; els.forEach(el => { if (el.getBoundingClientRect().top <= 200) a = +el.getAttribute('data-am-sec'); }); if (a !== this.state.amSec) this.setState({ amSec: a }); }; window.addEventListener('scroll', this.amf, { passive: true });
+    window.addEventListener('scroll', this.hs, { passive: true }); /*rAF-hero*/ requestAnimationFrame(() => { this.hs && this.hs(); requestAnimationFrame(() => this.hs && this.hs()); }); window.addEventListener('resize', this.hs); this.hs();
+    window.addEventListener('scroll', this.onScroll, { passive: true }); window.addEventListener('resize', this.onScroll); this.rz = () => this.forceUpdate(); window.addEventListener('resize', this.rz); window.addEventListener('scroll', pr, { passive: true }); this.pr = pr; this.onScroll(); pr();
+    this.pm = e => { if (this.dragging) this.dragCmp(e); }; this.pu = () => { this.dragging = false; };
+    window.addEventListener('pointermove', this.pm); window.addEventListener('pointerup', this.pu);
+    this.dayT = setInterval(() => { if (!this.dayTouched) this.setState(x => ({ day: (x.day + 1) % 7 })); }, 3800);
+    window.addEventListener('hashchange', this.onHash); const r0 = this.parse(); if (r0.page !== 'home') this.setState(this.routeState(r0), () => setTimeout(() => { this.reveal(); this.onScroll(); }, 30)); else this.reveal();
+    const E = 'cubic-bezier(.2,.7,.2,1)'; if (0) {
+    this.io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { const t = en.target; t.style.opacity = 1; t.style.transform = 'none'; if (t.hasAttribute('data-reveal-img')) t.style.clipPath = 'inset(0 0 0 0)'; this.io.unobserve(t); } }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => { el.style.opacity = 0; el.style.transform = 'translateY(26px)'; el.style.transition = 'opacity 1s ' + E + ', transform 1.1s ' + E; this.io.observe(el); });
+    document.querySelectorAll('[data-reveal-img]').forEach(el => { el.style.clipPath = 'inset(14% 0 0 0)'; el.style.transition = (el.style.transition ? el.style.transition + ',' : '') + 'clip-path 1.4s ' + E; this.io.observe(el); }); }
+  }
+  PAGES = ['apartamenty', 'udogodnienia', 'cennik', 'galeria', 'kontakt'];
+  parse() { const [p, id] = location.hash.replace(/^#\/?/, '').split('/'); return { page: this.PAGES.includes(p) ? p : 'home', id: id && /^\d\.\d+$/.test(id) ? id : null }; }
+  routeState(r) { const o = { page: r.page, pgOp: 1 }; if (r.page === 'apartamenty' && r.id) Object.assign(o, { mode: 'plan', fl: parseInt(r.id), unit: r.id, fade: false }); return o; }
+  onHash = () => { const r = this.parse(); if (r.page === this.state.page) { if (r.id) this.setState(this.routeState(r)); return; } this.setState({ pgOp: 0 }); clearTimeout(this.pt); this.pt = setTimeout(() => { window.scrollTo({ top: 0, behavior: 'instant' }); this.setState(this.routeState(r), () => setTimeout(() => { this.reveal(); this.onScroll(); this.pr && this.pr(); }, 30)); }, 280); };
+  reveal() { const E = 'cubic-bezier(.2,.7,.2,1)';
+    if (!this.io) this.io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { const t = en.target; t.style.opacity = 1; t.style.transform = 'none'; if (t.hasAttribute('data-reveal-img')) t.style.clipPath = 'inset(0 0 0 0)'; this.io.unobserve(t); } }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]:not([data-rv])').forEach(el => { el.setAttribute('data-rv', ''); el.style.opacity = 0; el.style.transform = 'translateY(26px)'; el.style.transition = 'opacity 1s ' + E + ', transform 1.1s ' + E; this.io.observe(el); });
+    document.querySelectorAll('[data-reveal-img]:not([data-rv])').forEach(el => { el.setAttribute('data-rv', ''); el.style.clipPath = 'inset(14% 0 0 0)'; el.style.transition = 'clip-path 1.4s ' + E; this.io.observe(el); }); }
+  componentWillUnmount() { window.removeEventListener('resize', this.rz); window.removeEventListener('scroll', this.amf); window.removeEventListener('scroll', this.skf); window.removeEventListener('hashchange', this.onHash); window.removeEventListener('scroll', this.hs); window.removeEventListener('scroll', this.onScroll); window.removeEventListener('scroll', this.pr); window.removeEventListener('pointermove', this.pm); window.removeEventListener('pointerup', this.pu); clearInterval(this.dayT); this.io && this.io.disconnect(); }
+  slide(d) { const c = this.vizRef.current; if (!c) return; const card = c.querySelector('[data-card]'); c.scrollBy({ left: d * ((card ? card.offsetWidth : 600) + 14), behavior: 'smooth' }); }
+  goContact() { location.hash = '#/kontakt'; }
+  amGo(k) { const el = document.querySelector('[data-am-sec="' + k + '"]'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 110, behavior: 'smooth' }); }
+  amVals(AM, s) {
+    const N = AM.length, BG = ['#ffffff', '#f3f1ec'];
+    const cat = (g, k, dark) => {
+      const h = s.amH[k], p = s.amP[k], cur = g.items[p], withImg = g.items.filter(x => x.img);
+      const pick = (it, j) => () => { const H = [...this.state.amH], P = [...this.state.amP]; if (H[k] === j && (!it.img || P[k] === j)) return; H[k] = j; if (it.img) P[k] = j; this.setState({ amH: H, amP: P }); };
+      return { k, l: g.l, k2: g.k2, lead: g.lead, no: '0' + (k + 1),
+        pics: g.items.map((it, j) => ({ it, j })).filter(x => x.it.img).map(x => ({ src: x.it.img, t: x.it.t, pos: x.it.pos || '50% 50%', op: x.j === p ? 1 : 0 })),
+        cap: cur.t, pos: String(withImg.indexOf(cur) + 1).padStart(2, '0') + ' / ' + String(withImg.length).padStart(2, '0'),
+        items: g.items.map((it, j) => ({ no: '0' + (j + 1), t: it.t, d: it.d, pick: pick(it, j),
+          c: j === h ? (dark ? '#ffffff' : '#151c29') : (dark ? '#b5bac3' : '#6d7381'),
+          bd: j === h ? (dark ? '#ffffff' : '#151c29') : (dark ? 'rgba(255,255,255,.2)' : '#c5c3bc') })) };
+    };
+    const rows = AM.slice(1).map((g, i) => ({ ...cat(g, i + 1, false), bg: BG[i % 2], dir: i % 2 ? 'row-reverse' : 'row' }));
+    const narrow = s.narrow;
+    const amCats = AM.map((g, k) => { const ph = g.items.filter(x => x.img), tx = g.items.filter(x => !x.img), odd = ph.length % 2 === 1;
+      return { k, l: g.l, lead: g.lead, hasTexts: tx.length > 0, texts: tx.map(x => ({ t: x.t, d: x.d })),
+        photos: ph.map((x, j) => { const full = !narrow && odd && j === 0; return { t: x.t, d: x.d, img: x.img, pos: x.pos || '50% 50%', span: full ? '1 / -1' : 'auto', ar: full ? '16/9' : '4/3' }; }) }; });
+    const nav = ['Wypoczynek', 'Ruch', 'Kuchnia', 'Codzienność', 'Zdrowie', 'W cenie pobytu', 'Uzdrowisko'];
+    return { amCats, amStick: (typeof window !== 'undefined' && window.innerWidth >= 1180) ? 'sticky' : 'static', amHeroAr: narrow ? '4/3' : '21/9',
+      amNav: nav.map((l, k) => ({ l, go: () => this.amGo(k) })) };
+  }
+  renderVals() {
+    const s = this.state, light = s.nav === 'light';
+    const FLOORS = [
+      { n: 'P', t: 'Poddasze', d: 'Kameralne pokoje pod świetlikami', top: '4%', h: '11%' },
+      { n: '3', t: 'Piętro 3', d: 'Pokoje mieszkalne z widokiem na wzgórza', top: '16%', h: '14%' },
+      { n: '2', t: 'Piętro 2', d: 'Pokoje z balkonami i wyjściem na taras', top: '30%', h: '25%' },
+      { n: '1', t: 'Piętro 1', d: 'Jadalnia, salon i taras widokowy', top: '56%', h: '19%' },
+      { n: '0', t: 'Parter', d: 'Recepcja, rehabilitacja, kawiarnia', top: '75%', h: '18%' }];
+    const ROOMS = [
+      { id: 'v5-room-1', t: 'Pokój jednoosobowy', p: 'Piętra 2–3', tag: 'Najczęściej wybierany', a: 'Bez progów', b: 'Rehabilitacyjne', w: 'Park', ph: 'Zdjęcie: pokój jednoosobowy' },
+      { id: 'v5-room-2', t: 'Pokój dwuosobowy', p: 'Dla par i rodzeństwa', tag: 'Dla dwojga', a: 'Bez progów', b: '2 × rehab.', w: 'Zbocze', ph: 'Zdjęcie: pokój dwuosobowy' },
+      { id: 'v5-room-3', t: 'Apartament z tarasem', p: 'Piętro 2', tag: 'Wyjście na taras', a: 'Z prysznicem', b: 'Rehabilitacyjne', w: 'Wzgórza', ph: 'Zdjęcie: apartament' }];
+    const VIZ = [
+      { src: 'assets/v5/naroznik-noc.png', k: 'O zmierzchu', t: 'Narożnik z tarasem', d: 'Przeszklona jadalnia i kuty taras na całej długości' },
+      { src: 'assets/v5/naroznik-dzien.png', k: 'W dzień', t: 'Elewacja od ogrodu', d: 'Kamienny cokół i ciepły beż tynku' },
+      { src: 'assets/v5/zmierzch-wzgorze.png', k: 'WIDOK', t: 'Nad doliną', d: 'Willa na zboczu ponad światłami Iwonicza' },
+      { src: 'assets/v5/zbocze-dzien.png', k: 'W dzień', t: 'Od strony zbocza', d: 'Taras z widokiem na Beskid Niski' },
+      { src: 'assets/v5/bok-noc.png', k: 'O zmierzchu', t: 'Wejście od podjazdu', d: 'Zadaszone wejście bez schodów' }];
+    const AM = [
+      { l: 'Strefa wypoczynkowo‑rekreacyjna', s: 'Wypoczynek', k2: 'Piętro 1', lead: 'Basen, jacuzzi i dwie sauny na jednym piętrze, z windą prosto z pokoju. Poręcze przy każdym zejściu do wody i opiekun zawsze w pobliżu.', items: [
+        { t: 'Basen', d: 'Basen 3 × 8 m z przeciwprądem i łagodnym zejściem po schodach z poręczą, na 1. piętrze.', img: 'assets/udog/basen.jpg', pos: '30% 55%' },
+        { t: 'SPA', d: 'Masaże, zabiegi borowinowe z lokalnych złóż i strefa relaksu z leżakami przy basenie.', img: 'assets/udog/masaz.jpg' },
+        { t: 'Jacuzzi', d: 'Hydromasaż w ciepłej wodzie, ulga dla stawów i mięśni, z pomocą opiekuna przy wejściu.', img: 'assets/udog/jacuzzi.jpg' },
+        { t: 'Sauna', d: 'Sauna sucha i parowa z oknem na ogród, z łagodną temperaturą dla seniorów.', img: 'assets/udog/sauna.jpg' }] },
+      { l: 'Ruch i rehabilitacja', s: 'Ruch', k2: 'Ruch', lead: 'Codzienny ruch dopasowany do możliwości, z fizjoterapeutą, który zna historię i tempo każdego mieszkańca.', items: [
+        { t: 'Sala ćwiczeń', d: 'Bieżnie, rowery i maty do gimnastyki, z trenerem na miejscu, codziennie od poniedziałku do soboty.', img: 'assets/udog/sala-cwiczen.jpg' },
+        { t: 'Masaż leczniczy', d: 'Masaż leczniczy, kamienie i krioterapia miejscowa, zlecane przez fizjoterapeutę.', img: 'assets/udog/masaz.jpg' },
+        { t: 'Fizjoterapia', d: 'Ćwiczenia indywidualne dobrane przez fizjoterapeutę, we własnym tempie.', img: 'assets/udog/cwiczenia.jpg' }] },
+      { l: 'Kuchnia i jadalnia', s: 'Kuchnia', k2: 'Kuchnia', lead: 'Posiłki gotowane na miejscu, każdego dnia od nowa, z uwzględnieniem diety i upodobań mieszkańców.', items: [
+        { t: 'Własna kuchnia', d: 'Gotujemy na miejscu, z sezonowych produktów od podkarpackich dostawców.', img: 'assets/udog/kuchnia.jpg' },
+        { t: 'Jadalnia z tarasem', d: 'Wspólne posiłki przy oknach na ogród, latem na tarasie.', img: 'assets/udog/jadalnia.jpg' },
+        { t: 'Diety', d: 'Cukrzycowa, lekkostrawna, papkowata, opracowane z dietetykiem.' },
+        { t: 'Kawiarnia na parterze', d: 'Kawa, herbata i domowe ciasto, także dla odwiedzających rodzin.' }] },
+      { l: 'Codzienność', s: 'Codzienność', k2: 'Codzienność', lead: 'Dzień ma swój rytm, ale nie ma przymusu, każdy sam wybiera, w czym chce wziąć udział.', items: [
+        { t: 'Sala klubowa', d: 'Bilard, ping-pong, karty i wieczorne spotkania przy kawie.', img: 'assets/udog/sala-klubowa.jpg' },
+        { t: 'Wieczory muzyczne', d: 'Koncerty, wspólne śpiewanie i potańcówki, kalendarz wydarzeń przez cały rok.', img: 'assets/udog/muzyka.jpg' },
+        { t: 'Terapia zajęciowa', d: 'Ceramika, ogród, warsztaty pamięci i zajęcia plastyczne.' },
+        { t: 'Fryzjer i podolog', d: 'Gabinet na parterze, wizyty umawia recepcja.' }] },
+      { l: 'Zdrowie', s: 'Zdrowie', k2: 'Zdrowie', lead: 'Opieka medyczna na miejscu, bez dojazdów, kolejek i długiego czekania na wizytę.', items: [
+        { t: 'Lekarz na miejscu', d: 'Stałe wizyty lekarza rodzinnego i konsultacje specjalistów.', img: 'assets/udog/rozmowa.jpg' },
+        { t: 'Dyżur pielęgniarski 24 h', d: 'Podawanie leków, pomiary i reakcja na przycisk przywołania o każdej porze.' },
+        { t: 'Psycholog', d: 'Rozmowy indywidualne i wsparcie w pierwszych tygodniach pobytu.' },
+        { t: 'Kuracje uzdrowiskowe', d: 'Organizujemy zabiegi w iwonickich sanatoriach i dojazd na miejsce.' }] }];    const am = AM[s.am];
+    const MODES = [{ k: 'dlugi', l: 'Wynajem długoterminowy' }, { k: 'zakup', l: 'Zakup apartamentu' }, { k: 'krotki', l: 'Wynajem krótkoterminowy' }];
+    const RATE = { PLN: 1, EUR: 4.25, USD: 3.7 }, SYM = { PLN: ' zł', EUR: ' €', USD: ' $' };
+    const fmt = n => Math.round(n / RATE[s.cur] / (s.cur === 'PLN' ? 100 : 10)) * (s.cur === 'PLN' ? 100 : 10);
+    const money = n => fmt(n).toLocaleString('pl-PL') + SYM[s.cur];
+    const A = s.area, MGMT = 3200, CARE = 4800, price = A * 14500;
+    let lines, total, note, head, kicker, p2h, p2v;
+    if (s.pMode === 'zakup') {
+      kicker = 'Apartament na własność, z umową opieki'; head = 'Koszt miesięczny'; total = money(MGMT + CARE); note = 'Obowiązkowe opłaty miesięczne przy własnym apartamencie';
+      p2h = 'Cena apartamentu'; p2v = money(price);
+      lines = [{ t: 'Cena zakupu apartamentu', d: 'Jednorazowo, zgodnie z harmonogramem inwestycji', v: money(price), u: '', req: false }];
+    } else if (s.pMode === 'dlugi') {
+      const rent = A * 130;
+      kicker = 'Wynajem długoterminowy, umowa od 6 miesięcy'; head = 'Koszt miesięczny'; total = money(rent + MGMT + CARE); note = 'Czynsz z obowiązkowymi opłatami, bez wkładu własnego';
+      p2h = 'Czynsz najmu'; p2v = money(rent);
+      lines = [{ t: 'Czynsz najmu', d: 'Płatny co miesiąc, kaucja w wysokości jednego czynszu', v: money(rent), u: 'miesięcznie', req: false }];
+    } else {
+      const day = A * 7 + 150;
+      kicker = 'Wynajem krótkoterminowy, pobyt od 7 dni'; head = 'Koszt doby'; total = money(day + (MGMT + CARE) / 30); note = 'Pobyt próbny, rekonwalescencja lub wytchnienie dla rodziny';
+      p2h = 'Najem za dobę'; p2v = money(day);
+      lines = [{ t: 'Najem apartamentu', d: 'Rozliczany za każdą dobę pobytu', v: money(day), u: 'za dobę', req: false }];
+    }
+    const per = s.pMode === 'krotki' ? 30 : 1, perU = s.pMode === 'krotki' ? 'Za dobę' : 'Miesięcznie';
+    lines.push({ t: 'Zarządzanie obiektem', d: 'Fundusz remontowy, media, pralnia, sprzątanie, recepcja, transport, wydarzenia', v: money(MGMT / per), u: perU.toLowerCase(), req: true });
+    lines.push({ t: 'Wyżywienie i opieka', d: '4 posiłki dziennie, diety, dyżur pielęgniarski 24 h, fizjoterapia', v: money(CARE / per), u: perU.toLowerCase(), req: true });
+    const PRE = [{ l: 'Najmniejszy', s: '25 m²', a: 25 }, { l: 'Typowy', s: '34 m²', a: 34 }, { l: 'Największy', s: '65 m²', a: 65 }];
+    const GAL = [
+      { src: 'assets/v5/naroznik-dzien.png', c: 'Elewacja od ogrodu' }, { src: 'assets/v5/zmierzch-wzgorze.png', c: 'Nad doliną' },
+      { src: 'assets/v5/naroznik-noc.png', c: 'Narożnik z tarasem' }, { src: 'assets/v5/bok-noc.png', c: 'Wejście od podjazdu' },
+      { src: 'assets/v5/front-noc.png', c: 'Elewacja frontowa o zmierzchu' }, { src: 'assets/v5/zbocze-dzien.png', c: 'Od strony zbocza' },
+      { src: 'assets/udog/sala-cwiczen.png', c: 'Sala ćwiczeń' }, { src: 'assets/udog/sauna.png', c: 'Sauna' },
+      { src: 'assets/udog/masaz.png', c: 'Masaże i zabiegi' }, { src: 'assets/udog/sala-klubowa.png', c: 'Sala klubowa' },
+      { src: 'assets/udog/kuchnia.png', c: 'Własna kuchnia' }, { src: 'assets/udog/muzyka.png', c: 'Wieczory muzyczne' },
+      { src: 'assets/v5/szkic-elewacji-t.png', c: 'Szkic elewacji' }];
+    const open = i => this.setState({ lb: i }), n = GAL.length, lb = s.lb;
+    const m2 = n => n.toFixed(2).replace('.', ',') + ' m²';
+    const SIDE = { E: 'Wschód', W: 'Zachód', S: 'Południe', SE: 'Płd.-wschód' }, SUN = { E: 'poranne słońce', W: 'popołudniowe słońce', S: 'słońce przez większość dnia', SE: 'słońce od rana do popołudnia' };
+    const sideOf = (f, n) => f === 1 ? (n === 1 ? 'S' : n === 2 ? 'SE' : n === 9 ? 'W' : 'E') : (n <= ({ 2: 3, 3: 5, 4: 5, 5: 4 })[f] ? 'W' : 'E');
+    const UNITS = {};
+    Object.keys(this.PL).forEach(k => { const f = +k; UNITS[f] = this.PL[k].u.map(r => { const n = +r[0].split('.')[1]; return { id: r[0], f, n, room: r[1], bath: r[2], prz: r[3], A: r[1] + r[2] + r[3], x: r[4], y: r[5], side: sideOf(f, n) }; }); });
+    const ALL = [].concat(...Object.values(UNITS)), byId = id => ALL.find(x => x.id === id);
+    const inPlan = s.mode === 'plan', F = this.PL[s.fl], FU = UNITS[s.fl] || [], U = s.unit ? byId(s.unit) : null;
+    const match = x => (s.aMin == null || x.A >= s.aMin) && (s.aMax == null || x.A <= s.aMax) && (s.fSize === 'all' || (s.fSize === 's' && x.A < 15) || (s.fSize === 'm' && x.A >= 15 && x.A <= 20) || (s.fSize === 'l' && x.A > 20)) && (s.fSide === 'all' || (s.fSide === 'E' ? (x.side === 'E' || x.side === 'SE') : x.side === s.fSide));
+    const rangeOf = arr => { const v = arr.map(x => x.A); return v.length ? m2(Math.min(...v)).replace(' m²', '') + '–' + m2(Math.max(...v)) : ''; };
+    const plural = n => n === 1 ? 'lokal' : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)) ? 'lokale' : 'lokali';
+    const fSum = f => UNITS[f].length ? UNITS[f].length + ' ' + plural(UNITS[f].length) + ' · ' + rangeOf(UNITS[f]) : 'Kawiarnia · lounge · recepcja';
+    const lit = s.hovFl != null ? s.hovFl : (inPlan ? s.fl : null);
+    const z = U ? 2.1 : 1, cl = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+    const tx = U ? cl(50 - U.x * z, (1 - z) * 100, 0) : 0, ty = U ? cl(50 - U.y * z, (1 - z) * 100, 0) : 0;
+    const ar = 1800 / F.h, hl = s.hovU;
+    const save = id => this.setState(x => ({ saved: x.saved.includes(id) ? x.saved.filter(q => q !== id) : [...x.saved, id] }));
+    const pick = id => { this.setState({ unit: id, merge: [] }); history.replaceState(null, '', '#/apartamenty/' + id); };
+    const step = d => { const i = FU.findIndex(x => x.id === s.unit); pick(FU[(i + d + FU.length) % FU.length].id); };
+    const MG = U ? s.merge.map(byId).filter(Boolean) : [], mg = MG.map(x => x.id), UA = U ? U.A + MG.reduce((t, x) => t + x.A, 0) : 0;
+    const MS = s.mset.map(byId).filter(x => x && x.f === s.fl), MSA = MS.reduce((t, x) => t + x.A, 0);
+    const PAIRS = ['1.1-1.2','1.2-1.3','1.3-1.4','1.4-1.5','1.6-1.7','1.7-1.8','2.2-2.3','2.8-2.7','2.7-2.6','2.6-2.5','2.5-2.4','3.1-3.2','3.2-3.3','3.4-3.5','3.10-3.9','3.9-3.8','3.8-3.7','3.7-3.6','4.1-4.2','4.2-4.3','4.4-4.5','4.10-4.9','4.9-4.8','4.8-4.7','4.7-4.6','5.1-5.2','5.2-5.3','5.9-5.8','5.8-5.7','5.7-5.6','5.6-5.5'];
+    const ADJ = {}; PAIRS.forEach(p => { const [a, b] = p.split('-'); (ADJ[a] = ADJ[a] || []).push(b); (ADJ[b] = ADJ[b] || []).push(a); });
+    const canAdd = id => s.mset.length === 0 ? !!ADJ[id] : s.mset.some(q => (ADJ[q] || []).includes(id));
+    const conn = arr => { if (!arr.length) return arr; const keep = [arr[0]]; let grow = true; while (grow) { grow = false; arr.forEach(q => { if (!keep.includes(q) && keep.some(k => (ADJ[k] || []).includes(q))) { keep.push(q); grow = true; } }); } return arr.filter(q => keep.includes(q)); };
+    const tog = id => { if (s.mset.includes(id)) this.setState({ mset: conn(s.mset.filter(q => q !== id)) }); else if (canAdd(id)) this.setState({ mset: [...s.mset, id] }); };
+    const elig = id => s.mset.includes(id) || canAdd(id);
+    const tap = id => s.mm ? tog(id) : pick(id);
+    const NB = U ? FU.filter(x => x.id !== U.id && x.side === U.side && (Math.abs(x.n - U.n) === 1 || MG.some(m => Math.abs(m.n - x.n) === 1))) : [];
+    const uPrice = x => s.uMode === 'zakup' ? { h: mg.length ? 'Cena orientacyjna · po połączeniu' : 'Cena orientacyjna', v: money(x.A * 14500), n: 'Według cennika · + opłaty za opiekę i zarządzanie' } : { h: 'Najem z opieką · miesięcznie', v: money(x.A * 130 + MGMT + CARE), n: 'Czynsz, wyżywienie, opieka 24 h i zarządzanie' };
+    const feats = x => ['Łazienka bez progów', 'Winda na piętrze'].concat(x.prz ? ['Przedsionek'] : [], x.f === 2 && x.side === 'E' ? ['Taras prywatny'] : [], x.f === 5 ? ['Skosy poddasza'] : [], x.A >= 24 ? ['Dla dwojga'] : []);
+    const SV = s.saved.map(byId).filter(Boolean);
+    const TY = [
+      { k: 's', no: 'I', t: 'Kameralny', d: 'Pokój z łazienką dla jednej osoby. Prosty układ, wszystko w zasięgu ręki.', slot: 'v5-room-1', ph: 'Zdjęcie: lokal kameralny', test: x => x.A < 15 },
+      { k: 'm', no: 'II', t: 'Standard', d: 'Najczęstszy układ w willi: miejsce na fotel, biurko i odwiedzających bliskich.', slot: 'v5-room-2', ph: 'Zdjęcie: lokal standard', test: x => x.A >= 15 && x.A <= 20 },
+      { k: 'l', no: 'III', t: 'Przestronny', d: 'Lokale narożne i największe w budynku, także dla par. Część z przedsionkiem.', slot: 'v5-room-3', ph: 'Zdjęcie: lokal przestronny', test: x => x.A > 20 }];
+    const TYB = TY.map(t => { const L = ALL.filter(t.test), fl = [...new Set(L.map(x => x.f))]; return fl.map(f => [f, L.filter(x => x.f === f).length]).sort((a, b) => b[1] - a[1])[0][0]; }), tyI = TY.findIndex(t => t.k === s.tp);
+    const IDX = [{ href: '#/apartamenty', t: 'Apartamenty', v: '46', d: 'lokali na pięciu piętrach' }, { href: '#/udogodnienia', t: 'Udogodnienia', v: '24 h', d: 'opieki, SPA z basenem 3 × 8 m' }, { href: '#/cennik', t: 'Cennik', v: '2', d: 'formy: zakup lub najem z opieką' }, { href: '#/galeria', t: 'Galeria', v: '7', d: 'wizualizacji willi' }];
+    const DAY = [['7:00', 'Pobudka bez pośpiechu', 'Opiekun pomaga przy porannej toalecie, pielęgniarka podaje leki.'], ['8:30', 'Śniadanie', 'W kawiarni na parterze albo w pokoju, z uwzględnieniem diety.'], ['10:00', 'Ruch', 'Fizjoterapia, basen na pierwszym piętrze albo spacer do pijalni wód.'], ['13:00', 'Obiad', 'Dwa dania z naszej kuchni, potem czas na odpoczynek.'], ['15:30', 'Popołudnie', 'Kawa, zajęcia w małych grupach i odwiedziny rodziny.'], ['18:00', 'Kolacja', 'Lekki posiłek i wieczór w lounge przy muzyce.'], ['21:00', 'Noc', 'Cisza nocna. Dyżur pielęgniarski czuwa do rana.']];
+    const plan = {
+      inPlan, hasUnit: !!U, showFloors: !inPlan, showList: inPlan && !U,
+      goBuilding: () => { this.setState({ mode: 'building', unit: null, hovU: null, hovFl: null }); history.replaceState(null, '', '#/apartamenty'); },
+      unselect: () => { this.setState({ unit: null }); history.replaceState(null, '', '#/apartamenty'); },
+      crumbB: { bg: inPlan ? 'transparent' : '#151c29', fg: inPlan ? '#151c29' : '#ffffff' }, crumbF: { bg: U ? 'transparent' : '#151c29', fg: U ? '#151c29' : '#ffffff' },
+      stageHint: !inPlan ? 'Wskaż piętro' : U ? '' : FU.length ? 'Wybierz lokal na rzucie' : '',
+      bOp: inPlan ? 0 : 1, bSc: inPlan ? 1.12 : 1, bPe: inPlan ? 'none' : 'auto', pOp: inPlan ? 1 : 0, pSc: inPlan ? 1 : .94, pPe: inPlan ? 'auto' : 'none',
+      bandLeave: () => this.setState({ hovFl: null }),
+      bandTags: [5, 4, 3, 2, 1, 0].map(f => ({ n: f === 0 ? 'P' : String(f), y: this.BAND_Y[f], c: lit === f ? '#151c29' : '#6d7381', w: lit === f ? '28px' : '12px' })),
+      tip: { on: !inPlan && s.hovFl != null, y: this.BAND_Y[s.hovFl] || '50%', t: s.hovFl != null ? this.PL[s.hovFl].t : '', s: s.hovFl != null ? fSum(s.hovFl) : '' },
+      rail: [5, 4, 3, 2, 1, 0].map(f => ({ n: f === 0 ? 'P' : String(f), t: this.PL[f].t, bg: f === s.fl ? '#151c29' : 'transparent', fg: f === s.fl ? '#ffffff' : '#151c29', pick: () => this.openFloor(f) })),
+      planW: `min(100cqw, calc(100cqh * ${ar.toFixed(4)}))`, planH: `min(100cqh, calc(100cqw / ${ar.toFixed(4)}))`, planOp: s.fade ? 0 : 1,
+      zoomT: `translate(${tx}%,${ty}%) scale(${z})`, inv: (1 / z).toFixed(3),
+      planSrc: 'assets/plany/plan-' + s.fl + '-t.png', planAlt: 'Rzut: ' + F.t,
+      amPins: F.am.map(m => ({ t: m[0], x: m[2] + '%', y: m[3] + '%' })),
+      pins: FU.map((x, i) => { const on = s.mm ? s.mset.includes(x.id) : ((U && U.id === x.id) || mg.includes(x.id)), hv = hl === x.id, ok = match(x); return { x: x.x + '%', y: x.y + '%', z: on || hv ? 3 : 2, label: s.mm ? (on ? '✓ ' : elig(x.id) ? '+ ' : '') + x.id + (on || hv ? ' · ' + m2(x.A) : '') : hv || on ? x.id + ' · ' + m2(x.A) : x.id, op: s.fade ? 0 : (s.mm ? (elig(x.id) ? 1 : .22) : U ? (on ? 1 : .35) : (ok ? 1 : .25)), delay: (i * 30) + 'ms', bg: on || hv ? '#151c29' : '#ffffff', fg: on || hv ? '#ffffff' : '#151c29', sh: on ? '0 0 0 6px rgba(21,28,41,.28), 0 8px 20px rgba(21,28,41,.25)' : '0 0 0 1px #151c29', pick: () => tap(x.id), enter: () => this.setState({ hovU: x.id }), leave: () => this.setState({ hovU: null }) }; }),
+      floorRows: [5, 4, 3, 2, 1, 0].map(f => ({ n: f === 0 ? 'P' : String(f), t: this.PL[f].t, s: fSum(f), bg: s.hovFl === f ? '#f3f1ec' : 'transparent', c: s.hovFl === f ? '#151c29' : '#6d7381', pick: () => this.openFloor(f), enter: () => this.setState({ hovFl: f }) })),
+      floorNum: s.fl === 0 ? 'P' : s.fl, floorName: F.t, floorDesc: F.d, hasUnits: FU.length > 0, noUnits: FU.length === 0,
+      sizeChips: [['all', s.aMin != null || s.aMax != null ? 'Metraż ' + (s.aMin ?? 0) + '–' + (s.aMax ?? '…') + ' m² ×' : 'Każdy metraż'], ['s', 'do 15 m²'], ['m', '15–20 m²'], ['l', 'pow. 20 m²']].map(([k, l]) => ({ l, clr: k === 'all', bg: s.fSize === k ? '#151c29' : 'transparent', fg: s.fSize === k ? '#ffffff' : '#151c29', bd: s.fSize === k ? '#151c29' : '#c5c3bc', pick: () => this.setState(k === 'all' ? { fSize: 'all', aMin: null, aMax: null } : { fSize: k }) })),
+      sideChips: [['all', 'Obie strony'], ['E', 'Wschód'], ['W', 'Zachód']].map(([k, l]) => ({ l, bg: s.fSide === k ? '#151c29' : 'transparent', fg: s.fSide === k ? '#ffffff' : '#151c29', bd: s.fSide === k ? '#151c29' : '#c5c3bc', pick: () => this.setState({ fSide: k }) })),
+      unitRows: FU.filter(match).map(x => ({ id: (s.mm ? (s.mset.includes(x.id) ? '✓ ' : elig(x.id) ? '+ ' : '') : '') + x.id, a: m2(x.A), side: SIDE[x.side], bg: hl === x.id || (s.mm && s.mset.includes(x.id)) ? '#f3f1ec' : 'transparent', op: s.mm && !elig(x.id) ? .3 : 1, heart: s.saved.includes(x.id) ? '♥' : '♡', hc: s.saved.includes(x.id) ? '#151c29' : '#6d7381', pick: () => tap(x.id), save: () => save(x.id), enter: () => this.setState({ hovU: x.id }), leave: () => this.setState({ hovU: null }) })),
+      noMatch: FU.length > 0 && !FU.some(match),
+      amRows: F.am.map(m => ({ t: m[0], a: m[1] ? m2(m[1]) : '' })),
+      mm: s.mm, mmOff: !s.mm, mmHas: s.mm && MS.length > 0, mmEmpty: s.mm && MS.length === 0,
+      mmUnits: MS.map(x => x.id).join(' + '), mmArea: m2(MSA), mmCount: MS.length + ' ' + plural(MS.length), mmPrice: money(MSA * 14500),
+      mmRent: money(MSA * 130 + MGMT + CARE) + ' / mies.',
+      mmToggle: () => this.setState(st => ({ mm: !st.mm, mset: [], unit: null })), mmClear: () => this.setState({ mset: [] }),
+      mmAsk: () => { this.setState({ msg: `Pytam o połączenie lokali ${MS.map(x => x.id).join(' + ')} (${F.t.toLowerCase()}, łącznie ${m2(MSA)}).` }); this.goContact(); },
+      mmOne: s.mm && MS.length === 1, unitNb: !!(U && ADJ[U.id]), unitNoNb: !!(U && !ADJ[U.id]),
+      mergeFromUnit: () => { const id = s.unit; history.replaceState(null, '', '#/apartamenty'); this.setState({ mm: true, mset: id ? [id] : [], unit: null }); },
+      hTabs: [['Klasycystyczna architektura', 'Zachowujemy elewację z kutymi balustradami i kamiennym cokołem. Wnętrza od nowa: winda, szerokie korytarze, łazienki bez progów.', '#/galeria', 'Zobacz galerię', 'assets/v5/szkic-hero.png'], ['Apartamenty z widokiem', 'Od 12 do 43 m², każdy z łazienką i przyciskiem przywołania. Od wschodu dolina, od zachodu park.', '#/apartamenty', 'Wybierz apartament', 'assets/plany/plan-3-t.png'], ['SPA, basen i opieka', 'Basen z przeciwprądem, sauny i jacuzzi. Pielęgniarki, lekarz i fizjoterapeuta na miejscu.', '#/udogodnienia', 'Poznaj udogodnienia', 'assets/plany/plan-1-t.png']].map((r, i) => { const on = s.ht === i; return { n: '0' + (i + 1), t: r[0], d: r[1], href: r[2], cta: r[3], img: r[4], fg: on ? '#151c29' : '#c5c3bc', bd: on ? '#151c29' : '#e4e2dc', op: on ? 1 : 0, x: on ? 0 : -10, rows: on ? '1fr' : '0fr', iop: on ? 1 : 0, isc: on ? 1 : 1.04, pick: () => s.ht !== i && this.setState({ ht: i }) }; }),
+      mergeOn: mg.length > 0, mergeNone: NB.length === 0,
+      mergeOpts: NB.map(x => { const on = mg.includes(x.id); return { l: (on ? '✓ ' : '+ ') + x.id + ' · ' + m2(x.A), bg: on ? '#151c29' : '#ffffff', fg: on ? '#ffffff' : '#151c29', bd: on ? '#151c29' : '#c5c3bc', pick: () => this.setState(st => ({ merge: st.merge.includes(x.id) ? st.merge.filter(q => q !== x.id) : [...st.merge, x.id] })) }; }),
+      mergeSum: U ? [U.id].concat(mg).join(' + ') + ' · łącznie ' + m2(UA) : '', mergeClear: () => this.setState({ merge: [] }),
+      u: U ? { id: [U.id].concat(mg).join(' + '), a: m2(UA), kicker: (F.t + ' · ' + SIDE[U.side]).toUpperCase(), sideLong: SIDE[U.side] + ' — ' + SUN[U.side],
+        parts: (mg.length ? [{ t: 'Lokal ' + U.id, v: m2(U.A) }].concat(MG.map(x => ({ t: 'Lokal ' + x.id + ' (dołączony)', v: m2(x.A) }))) : [{ t: 'Pokój', v: m2(U.room) }, { t: 'Łazienka', v: m2(U.bath) }].concat(U.prz ? [{ t: 'Przedsionek', v: m2(U.prz) }] : [])),
+        feats: feats(U), priceHead: uPrice({ A: UA }).h, price: uPrice({ A: UA }).v, priceNote: uPrice({ A: UA }).n,
+        ask: () => { this.setState({ msg: mg.length ? `Pytam o połączenie lokali ${[U.id].concat(mg).join(' + ')} (${F.t.toLowerCase()}, łącznie ${m2(UA)}).` : `Pytam o lokal ${U.id} (${F.t.toLowerCase()}, ${m2(U.A)}).` }); this.goContact(); },
+        save: () => save(U.id), saveL: s.saved.includes(U.id) ? '♥ Zapisany' : '♡ Zapisz' } : { id: '', a: '', kicker: '', sideLong: '', parts: [], feats: [], priceHead: '', price: '', priceNote: '', ask: () => {}, save: () => {}, saveL: '' },
+      uModes: [['najem', 'Wynajem od 6 mies.'], ['zakup', 'Zakup']].map(([k, l]) => ({ l, bg: s.uMode === k ? '#ffffff' : 'transparent', fg: s.uMode === k ? '#151c29' : '#e4e2dc', pick: () => this.setState({ uMode: k }) })),
+      prevUnit: () => step(-1), nextUnit: () => step(1),
+      hasSaved: SV.length > 0, savedCount: SV.length, cmpOpen: s.cmp && SV.length > 0, cmpL: s.cmp ? 'Zwiń porównanie' : 'Porównaj',
+      toggleCmp: () => this.setState(x => ({ cmp: !x.cmp })),
+      savedChips: SV.map(x => ({ l: 'Lokal ' + x.id + ' · ' + m2(x.A), go: () => { this.setState({ mode: 'plan', fl: x.f, unit: x.id, fade: false }); const el = document.getElementById('pietra'); el && window.scrollTo({ top: el.offsetTop, behavior: 'smooth' }); }, rm: () => save(x.id) })),
+      cmpHead: SV.map(x => x.id),
+      cmpRows: [
+        { k: 'Poziom', v: SV.map(x => this.PL[x.f].t) }, { k: 'Powierzchnia', v: SV.map(x => m2(x.A)) }, { k: 'Pokój', v: SV.map(x => m2(x.room)) },
+        { k: 'Łazienka', v: SV.map(x => m2(x.bath)) }, { k: 'Strona', v: SV.map(x => SIDE[x.side]) },
+        { k: 'Zakup (orient.)', v: SV.map(x => money(x.A * 14500)) }, { k: 'Najem z opieką', v: SV.map(x => money(x.A * 130 + MGMT + CARE) + ' / mies.') }],
+    };
+    Object.keys(this.PL).forEach(k => { const f = +k; plan['band' + f] = { t: this.PL[f].t, fill: lit === f ? 'rgba(21,28,41,.24)' : 'rgba(21,28,41,0)', stroke: lit === f ? '#151c29' : 'rgba(21,28,41,0)', enter: () => { if (this.state.hovFl !== f) this.setState({ hovFl: f }); }, pick: () => this.openFloor(f) }; });
+
+        return {
+      ...plan,
+      pg: { home: s.page === 'home', apartamenty: s.page === 'apartamenty', udogodnienia: s.page === 'udogodnienia', cennik: s.page === 'cennik', galeria: s.page === 'galeria', kontakt: s.page === 'kontakt' }, pgOp: s.pgOp,
+      navItems: [['apartamenty', 'Apartamenty'], ['udogodnienia', 'Udogodnienia'], ['cennik', 'Cennik'], ['galeria', 'Galeria'], ['kontakt', 'Kontakt']].map(([k, l]) => ({ l, href: '#/' + k, bd: s.page === k ? 'currentColor' : 'transparent' })),
+      minA: Math.round(Math.min(...ALL.map(x => x.A))), maxA: Math.round(Math.max(...ALL.map(x => x.A))),
+      idxRef: this.idxRef, idxImg: this.idxImg, idxOp: s.idx == null ? 0 : 1,
+      idxMove: e => { const el = this.idxRef.current, im = this.idxImg.current; if (!el || !im) return; const r = el.getBoundingClientRect(); const x = e.clientX - r.left - im.offsetWidth / 2, y = e.clientY - r.top - im.offsetHeight / 2; this.ix = this.ix == null ? x : this.ix; this.iy = this.iy == null ? y : this.iy; this.tx = x; this.ty = y; if (!this.iraf) { const loop = () => { this.ix += (this.tx - this.ix) * .14; this.iy += (this.ty - this.iy) * .14; const rot = Math.max(-6, Math.min(6, (this.tx - this.ix) * .04)); im.style.transform = 'translate3d(' + this.ix + 'px,' + this.iy + 'px,0) rotate(' + rot + 'deg)'; this.iraf = Math.abs(this.tx - this.ix) + Math.abs(this.ty - this.iy) > .5 ? requestAnimationFrame(loop) : null; }; this.iraf = requestAnimationFrame(loop); } },
+      idxOut: () => this.setState({ idx: null }),
+      idxDir: s.narrow ? 'column' : 'row', idxH: s.narrow ? 'auto' : 'min(88svh,900px)', idxMinH: s.narrow ? '0' : '520px',
+      sMin: s.sMin, sMax: s.sMax, setSMin: e => this.setState({ sMin: e.target.value }), setSMax: e => this.setState({ sMax: e.target.value }),
+      sFloors: ['all', 1, 2, 3, 4, 5].map(f => ({ flex: f === 'all' ? '2 1 0' : '1 1 0', l: f === 'all' ? 'Każde' : String(f), bg: s.sFl === f ? '#151c29' : '#ffffff', fg: s.sFl === f ? '#ffffff' : '#151c29', bd: s.sFl === f ? '#151c29' : '#e4e2dc', pick: () => this.setState({ sFl: f }) })),
+      sSides: [['all', 'Obie'], ['E', 'Wschód'], ['W', 'Zachód']].map(([k, l]) => ({ flex: '1 1 0', l, bg: s.fSide === k ? '#151c29' : '#ffffff', fg: s.fSide === k ? '#ffffff' : '#151c29', bd: s.fSide === k ? '#151c29' : '#e4e2dc', pick: () => this.setState({ fSide: k }) })),
+      sCount: (() => { const lo = parseFloat(s.sMin), hi = parseFloat(s.sMax), n = ALL.filter(x => (isNaN(lo) || x.A >= lo) && (isNaN(hi) || x.A <= hi) && (s.sFl === 'all' || x.f === s.sFl) && (s.fSide === 'all' || (s.fSide === 'E' ? (x.side === 'E' || x.side === 'SE') : x.side === s.fSide))).length; return n + ' ' + plural(n); })(),
+      sGo: () => { const lo = parseFloat(this.state.sMin), hi = parseFloat(this.state.sMax), aMin = isNaN(lo) ? null : lo, aMax = isNaN(hi) ? null : hi; const ok = x => (aMin == null || x.A >= aMin) && (aMax == null || x.A <= aMax); let fl = this.state.sFl; if (fl === 'all') { const c = [1, 2, 3, 4, 5].map(f => [f, ALL.filter(x => x.f === f && ok(x)).length]).sort((a, b) => b[1] - a[1]); fl = c[0][1] ? c[0][0] : 3; } this.setState({ aMin, aMax, fSize: 'all', mode: 'plan', fl, unit: null, fade: false }); location.hash = '#/apartamenty'; },
+      idxRows: IDX.map(t => ({ href: t.href, t: t.t, v: t.v, d: t.d })),
+      teasers: [
+        { href: '#/apartamenty', src: 'assets/v5/naroznik-noc.png', k: '46 APARTAMENTÓW', t: 'Apartamenty', d: 'Wybór z elewacji i rzutów pięter' },
+        { href: '#/udogodnienia', src: 'assets/udog/sauna.png', k: 'Spa · opieka · kuchnia', t: 'Udogodnienia', d: 'Basen, rehabilitacja i rytm dnia' },
+        { href: '#/cennik', src: 'assets/v5/bok-noc.png', k: 'Zakup lub najem', t: 'Cennik', d: 'Kalkulator kosztu miesięcznego' },
+        { href: '#/galeria', src: 'assets/v5/zmierzch-wzgorze.png', k: 'Wizualizacje', t: 'Galeria', d: 'Willa w dzień i po zmroku' }],
+      galAll: GAL.map((g, i) => ({ src: g.src, c: g.c, open: () => open(i), col: i === 0 ? '1 / -1' : 'auto', ar: i === 0 ? '21/9' : '4/3' })),
+      amTabs: AM.map((t, i) => ({ l: t.l, pick: () => this.setState({ am: i, amI: 0 }), fg: i === s.am ? '#151c29' : '#6d7381', bd: i === s.am ? '#151c29' : 'transparent' })),
+      amList: am.items.map((it, j) => ({ no: '0' + (j + 1), t: it.t, d: it.d, c: j === s.amI ? '#151c29' : '#6d7381', rows: j === s.amI ? '1fr' : '0fr', enter: () => { if (this.state.amI !== j) this.setState({ amI: j }); } })),
+      amSlots: [].concat(...AM.map((g, ti) => g.items.map((it, j) => { const on = ti === s.am && j === s.amI; return { id: 'v5-am-' + ti + '-' + j, ph: 'Zdjęcie: ' + it.t.toLowerCase(), op: on ? 1 : 0, pe: on ? 'auto' : 'none' }; }))),
+      types: TY.map(t => { const L = ALL.filter(t.test), fl = [...new Set(L.map(x => x.f))].sort(), best = fl.map(f => [f, L.filter(x => x.f === f).length]).sort((a, b) => b[1] - a[1])[0][0], on = s.tp === t.k;
+        return { no: t.no, t: t.t, d: t.d, slot: t.slot, ph: t.ph, count: String(L.length), range: rangeOf(L), floors: fl.join(', '), c: on ? '#151c29' : '#6d7381', rows: on ? '1fr' : '0fr', op: on ? 1 : 0, pe: on ? 'auto' : 'none', sc: on ? 1 : 1.06,
+          enter: () => { if (this.state.tp !== t.k) this.setState({ tp: t.k }); },
+          go: e => { e.stopPropagation(); this.setState({ fSize: t.k, fSide: 'all', mode: 'plan', fl: best, unit: null, fade: false }); const el = document.getElementById('pietra'); el && window.scrollTo({ top: el.offsetTop, behavior: 'smooth' }); } }; }),
+      tpNo: TY[tyI].no, tpName: TY[tyI].t + ' · ' + this.PL[TYB[tyI]].t, tpPlan: 'assets/plany/plan-' + TYB[tyI] + '-t.png',
+      amImg: (am.items[s.amI] && am.items[s.amI].img) || am.items.filter(x => x.img).slice(-1)[0].img, amCap: (am.items[s.amI] || am.items[0]).t, amFit: (am.items[s.amI] && am.items[s.amI].fit) || 'cover',
+      day: { t: DAY[s.day][0], title: DAY[s.day][1], desc: DAY[s.day][2] }, dayPct: (s.day / 6 * 100) + '%',
+      dayTicks: DAY.map((d, i) => ({ l: d[0], x: (i / 6 * 100) + '%', c: i === s.day ? '#151c29' : '#6d7381', bg: i <= s.day ? '#151c29' : '#ffffff', pick: () => { this.dayTouched = true; this.setState({ day: i }); } })),
+      cmpRef: this.cmpRef, progRef: this.progRef, dnR: (100 - s.dn) + '%', dnX: s.dn + '%', dnLo: s.dn > 14 ? 1 : 0, dnRo: s.dn < 86 ? 1 : 0,
+      cmpMove: e => { if (e.pointerType === 'mouse' || this.dragging) this.dragCmp(e); }, cmpDown: e => { this.dragging = true; this.dragCmp(e); },
+      amItems: am.items.map((it, j) => ({ ...it, id: `v5-am-${s.am}-${j}`, ph: 'Zdjęcie: ' + it.t.toLowerCase() })),
+      incl: [{ t: 'Sprzątanie i pranie', d: 'Codzienne porządki w pokoju, pranie i prasowanie odzieży.' }, { t: 'Recepcja', d: 'Umawianie wizyt, zakupy, korespondencja i formalności.' }, { t: 'Transport', d: 'Dowóz do lekarzy i sanatoriów w Iwoniczu i Krośnie.' }, { t: 'Pokoje dla rodziny', d: 'Bliscy mogą zostać na noc w tym samym budynku.' }, { t: 'Przycisk przywołania', d: 'W każdym pokoju i łazience, z reakcją przez całą dobę.' }, { t: 'Wydarzenia', d: 'Koncerty, wieczorki taneczne i wycieczki po okolicy.' }],
+      pModes: MODES.map(m => ({ l: m.l, pick: () => this.setState({ pMode: m.k }), bg: m.k === s.pMode ? '#151c29' : 'transparent', fg: m.k === s.pMode ? '#ffffff' : '#151c29' })),
+      area: A, areaPct: ((A - 25) / 40 * 100) + '%', setArea: e => this.setState({ area: +e.target.value }),
+      presets: PRE.map(q => ({ l: q.l, s: q.s, pick: () => this.setState({ area: q.a }), bg: q.a === A ? '#ffffff' : 'transparent', bd: q.a === A ? '#151c29' : '#e4e2dc' })),
+      curs: ['PLN', 'EUR', 'USD'].map(c => ({ l: c, pick: () => this.setState({ cur: c }), bg: c === s.cur ? '#ffffff' : 'transparent', fg: c === s.cur ? '#151c29' : '#e4e2dc' })),
+      pKicker: kicker, lowRent: money(25 * 130 + MGMT + CARE), pUnit: s.pMode === 'krotki' ? '/ doba' : '/ miesiąc', pHead: head, pTotal: total, pNote: note, p2Head: p2h, p2Val: p2v, pLines: lines,
+      pAsk: () => this.setState({ msg: `Pytam o apartament: ${MODES.find(m => m.k === s.pMode).l.toLowerCase()}, ok. ${A} m².` }),
+      g0: () => open(0), g1: () => open(1), g2: () => open(2), g3: () => open(3), galMore: n - 3,
+      lbOpen: lb != null, lbSrc: lb != null ? GAL[lb].src : '', lbCap: lb != null ? GAL[lb].c : '', lbCount: lb != null ? `${lb + 1} / ${n}` : '',
+      lbClose: () => this.setState({ lb: null }), stop: e => e.stopPropagation(),
+      lbPrev: e => { e.stopPropagation(); this.setState({ lb: (lb - 1 + n) % n }); }, lbNext: e => { e.stopPropagation(); this.setState({ lb: (lb + 1) % n }); },
+      lbThumbs: GAL.map((g, i) => ({ src: g.src, o: i === lb ? 1 : .45, ol: i === lb ? '1px solid #ffffff' : 'none', pick: e => { e.stopPropagation(); open(i); } })),
+      vizRef: this.vizRef, heroSec: this.heroSec, heroBg: this.heroBg, sketchImg: this.sketchImg, photoImg: this.photoImg, photoWrap: this.photoWrap, heroScale: this.heroScale, heroFog: this.heroFog, heroShade: this.heroShade, heroText: this.heroText, heroBar: this.heroBar, heroHint: this.heroHint, heroCta: this.heroCta, willaSec: this.willaSec, willaTrack: this.willaTrack, willaBar: this.willaBar,
+      skW: s.sk ? 'clamp(52px,6vw,92px)' : '0px', skM: s.sk ? 'clamp(10px,1.1vw,16px)' : '0px', skO: s.sk ? 1 : 0, skD: s.sk ? 0 : 1,
+      navBg: 'rgba(255,255,255,.92)', navFg: '#151c29', navLine: '0 1px 0 rgba(21,28,41,.08)',
+      ctaBg: '#151c29', ctaFg: '#ffffff', ctaDot: 'transparent', ctaDotFg: '#c9a86f',
+      setStay: e => this.setState({ stay: e.target.value }), setRoom: e => this.setState({ room: e.target.value }), setWhen: e => this.setState({ when: e.target.value }),
+      checkAvail: e => { e.preventDefault(); this.setState(x => ({ msg: `Pytam o dostępność: ${x.stay.toLowerCase()}, ${x.room.toLowerCase()}${x.when ? ', od ' + x.when : ''}.` })); this.goContact(); },
+      facts: [{ v: '46', l: 'apartamentów' }, { v: '24 h', l: 'opieka pielęgniarska' }, { v: '3 × 8 m', l: 'basen w strefie SPA' }, { v: '6', l: 'poziomów z windą' }],
+      viz: VIZ, vizPrev: () => this.slide(-1), vizNext: () => this.slide(1),
+      ...Object.fromEntries(FLOORS.map((f, i) => ['fl' + i, { t: f.t, fill: i === s.floor ? 'rgba(21,28,41,.22)' : 'rgba(21,28,41,0)', stroke: i === s.floor ? '#151c29' : 'rgba(21,28,41,0)', pick: () => { if (this.state.floor !== i) this.setState({ floor: i }); } }])),
+      floors: FLOORS.map((f, i) => ({ ...f, bg: i === s.floor ? 'rgba(21,28,41,.16)' : 'transparent', line: i === s.floor ? 'inset 0 0 0 1px rgba(21,28,41,.55)' : 'none', c: i === s.floor ? '#151c29' : '#6d7381', bc: i === s.floor ? '#151c29' : '#e4e2dc', pick: () => { if (this.state.floor !== i) this.setState({ floor: i }); } })),
+      rooms: ROOMS.map(r => ({ ...r, ask: () => this.setState({ msg: `Pytam o: ${r.t.toLowerCase()}.` }) })),
+      msg: s.msg, setMsg: e => this.setState({ msg: e.target.value }),
+      notSent: !s.sent, sent: s.sent, submit: e => { e.preventDefault(); this.setState({ sent: true }); }, reset: () => this.setState({ sent: false, msg: '' }),
+      ...this.amVals(AM, s)
+    };
+  }
+}
+</script>
+</body>
+</html>
